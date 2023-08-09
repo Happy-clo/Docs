@@ -41,10 +41,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'MCFun Server Wiki',
+        title: 'Help Wiki',
         logo: {
-          alt: 'eco icon',
-          src: 'img/logo.svg',
+          alt: 'icon',
+          src: 'img/logo.ico',
         },
         items: [
           {
