@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'MCFun Server Wiki',
+  title: 'Happy Wiki',
   tagline: 'Wiki for Happy',
   url: 'https://wiki.1145.one/',
   baseUrl: '/',
@@ -26,7 +26,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/Auxilor/auxilor.github.io/tree/master/',
+          editUrl: 'https://github.com/Happy-clo/Docs/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
