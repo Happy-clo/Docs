@@ -25,8 +25,7 @@ Paper 使用基于混淆处理的反矿物透视，提供两种模式。可以�
 Yaml需要注意缩进！下面的配置都正确的处理了缩进，请确保在复制时同样地正确地处理了缩进。
 
 ### `engine-mode: 1`
-:::: code-group
-::: code-group-item 默认世界 
+### 默认世界 
 ```
 请使用以下内容来替代掉 paper-world-defaults.yml 中的 anticheat.anti-xray 键。  
 ```
@@ -67,8 +66,7 @@ anticheat:
     use-permission: false
 
 ```
-:::
-::: code-group-item 下界  
+### 下界  
 ```
 复制到地狱文件夹中的 paper-world.yml 。具体请见左侧的配置文件指南。  
 ```
@@ -89,8 +87,7 @@ anticheat:
     use-permission: false
 
 ```
-:::
-::: code-group-item 末地  
+### 末地  
 ```
 复制到末地文件夹中的 paper-world.yml 。具体请见左侧的配置文件指南。  
 ```
@@ -103,8 +100,7 @@ anticheat:
 :::
 ::::
 ### `engine-mode: 2`
-:::: code-group
-::: code-group-item 默认世界
+### 默认世界
 ```
 请使用以下内容来替代掉 paper-world-defaults.yml 中的 anticheat.anti-xray 键。
 ```  
@@ -161,8 +157,7 @@ anticheat:
     use-permission: false
 
 ```
-:::
-::: code-group-item 下界 
+### 下界 
 ```
 复制到地狱文件夹中的`paper-world.yml`。具体请见左侧的配置文件指南。   
 ``` 
@@ -195,8 +190,7 @@ anticheat:
     use-permission: false
 
 ```
-:::
-::: code-group-item 末地  
+### 末地  
 ```
 复制到末地文件夹中的`paper-world.yml`。具体请见左侧的配置文件指南。    
 ```
@@ -206,14 +200,10 @@ anticheat:
     enabled: false
 
 ```
-:::
-::::
-
 
 ## 常见问题解答与支持
 
-
-::: details 我依然可以看到（某些）矿石 / 使用 X-ray（矿物透视）
+### 我依然可以看到（某些）矿石 / 使用 X-ray（矿物透视）
 正如上所述，这里解释了一些即使你启用了反矿物透视却依然能够看到（某些）矿石的原因：  
   
 * 矿石在配置项 `max-block-height` 之上。
@@ -221,33 +211,21 @@ anticheat:
 * 启用了 `use-permission` 且你有绕过反矿物透视的权限或你有OP权限。
 * 在配置的方块列表中缺少该方块类型。可能使用了过时的配置文件。
 
-:::
-
-
-::: details 我已经添加了假方块但是 X-ray 却看不见它们
+### 我已经添加了假方块但是 X-ray 却看不见它们
 如果你正在使用 `engine-mode: 2` 且你已经添加了假方块至 `hidden-blocks` 列表中，但是你在游戏中使用X-ray 时却看不见它们，可能有以下几点原因：
 
 * 添加的方块类型是方块实体。反矿物透视可以隐藏（替换）方块实体（例如箱子），前提是它们没有裸露在空气或其它透明方块中。但是，反矿物透视无法将方块实体作为假方块替换进区块里。
 * 方块在你的客户端中的 X-ray mod 被禁用或你的 X-ray 资源包不显示该方块。
 
-:::
-
-
-::: details 在 y =0 以下或某些其它地方不工作
+### 在 y =0 以下或某些其它地方不工作
 * 你的配置文件很有可能已过时且在 `replacement-blocks` 列表中缺少重要方块，例如 `深板岩` 或特定生物群系才会出现的方块，比如 `玄武岩`。你可能也想检查 `hidden-blocks` 列表是否包含了全部重要矿石与它们对应的 `深层` 变种。
   
 * 如果它超过一定的 y 高度就不工作，请检查你的 `max-block-height` 配置项。
 
-:::
-
-::: details 反矿物透视依然无法工作，进一步的故障排除
+### 反矿物透视依然无法工作，进一步的故障排除
 * 确保每更改完反矿物透视配置文件之后重启一次服务器。更改不会自动生效。
 * 不要使用 `/reload` 命令。要应用反矿物透视更改需要重启服务器。
 * 在重启服务器之后，查看 timings 或 spark 的 config 部分以验证配置是否已正常应用。
 
-:::
-
-::: details 如果它依然不正常工作，我该如何并且去哪里寻求支持？
+### 如果它依然不正常工作，我该如何并且去哪里寻求支持？
 如果以上几点依然无法解决你的问题，或你有关于反矿物透视更进一步的问题，请不要犹豫，在 [PaperMC Discord](https://discord.gg/papermc) 中通过 #paper-help 频道询问我们。请尝试提供关于你的问题尽可能多的细节。"It doesn't work"（“它不正常工作”）在寻求帮助时并不是很有用。描述你预期中的目的，你为此尝试过什么，你所期望的与观察到的。最好包含一个 timings 或 spark 链接以及一张在游戏中看到的图片。
-
-:::

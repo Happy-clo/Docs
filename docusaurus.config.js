@@ -44,7 +44,7 @@ const config = {
         title: 'Help Wiki',
         logo: {
           alt: 'icon',
-          src: 'img/logo.ico',
+          src: 'img/logo.svg',
         },
         items: [
           {
