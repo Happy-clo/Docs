@@ -64,6 +64,9 @@ const config = {
         appId: 'MZ2URUJP31', // Optional, if you run the DocSearch crawler on your own
         algoliaOptions: {} // Optional, if provided by Algolia
       },
+      i18n: {
+        defaultLocale: "zh-CN",
+        locales: ["zh-CN"],
     }),
 };
 
