@@ -1,9 +1,8 @@
 # 迁移数据
 要从你的服务器迁移到Paper相当简单。下面将告诉你如何迁移数据。  
   
-::: tip 备份数据 
+### 备份数据 
 开始之前，请确保你的服务器有一份可用的完整备份。  
-:::
 
 ## 从其它服务端迁移到Paper
 ### 从CraftBukkit或Spigot
@@ -14,9 +13,8 @@
 4. 启动服务器。  
 Paper与现有的插件完全兼容。  
   
-::: tip 配置文件
+### 配置文件
 Paper依旧会保留bukkit.yml和spigot.yml并使用它们的配置。只有新增的配置才会保存到paper.yml中。
-:::
 
 ### 从Vanilla（原版）
 当从原版迁移到Paper服务端时，每一个世界文件夹都会自动转换。如果你想要从Paper转回原版，请阅读下文的“转到Vanilla（原版）”。
@@ -42,10 +40,8 @@ Paper依旧会保留bukkit.yml和spigot.yml并使用它们的配置。只有新�
 | Vanilla         | `/world`  | `/world/DIM-1`        | `/world/DIM1`         |
 | Paper           | `/world`  | `/world_nether/DIM-1` | `/world_the_end/DIM1` |
 
-::: tip 
 以下步骤将假设 `level-name`（在server.properties中设定）是 `world`。  
 如果不是，请将下文 `world` 相关字符改成 `level-name` 的值。  
-:::
 
 1. 如果服务器正在运行，请先停止。
 2. 如果你已经运行了原版服务器，请先前往 `world` 文件夹中删除 DIM-1 和 DIM1 文件夹。只有在原版服务器已经启动时，才需要进行该步骤。
