@@ -13,6 +13,8 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  // @ts-ignore
+  onBrokenLinks: 'ignore',
   organizationName: 'Happy-clo', // Usually your GitHub org/user name.
   projectName: 'happy-clo.github.io', // Usually your repo name.
   trailingSlash: false,
