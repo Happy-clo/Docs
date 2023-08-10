@@ -42,9 +42,8 @@ disabled-commands:
     - `bukkit.command.uptime`
 
 ## /demo
-::: details 演示模式画面 📷
+演示模式画面 📷
 ![Demo Screen](https://purpurmc.org/docs/images/demo.png)
-:::
 
 - 此命令将为玩家显示演示模式画面。如果不指定玩家名或使用玩家实体目标选择器（`@a`，`@r`）则会为你自己显示演示模式画面。
 
@@ -70,9 +69,8 @@ disabled-commands:
     - `bukkit.command.credits`
 
 ## /tpsbar
-::: details 正在使用 tpsbar 的图像 📷
+正在使用 tpsbar 的图像 📷
 ![正在使用TPSBar](https://purpurmc.org/docs/images/bossbar.gif)
-:::
 
 - 此命令将为玩家在 bossbar 上显示当前的 TPS/MSPT。如果不指定玩家名或使用玩家实体目标选择器（`@a`，`@r`）则会为你自己显示当前的 TPS/MSPT。
 
