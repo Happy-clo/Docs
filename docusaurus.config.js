@@ -41,7 +41,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Help Wiki',
+        title: 'Happy Wiki',
         logo: {
           alt: 'icon',
           src: 'img/logo.svg',
