@@ -11,7 +11,7 @@ title: "Aikar's Flags"
 ```
 java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar paper.jar --nogui
 ```
-### 不要在服务器上使用全部内存
+#### 不要在服务器上使用全部内存
 当你根据服务器的实际内存进行配置 -Xms 与 -Xmx 项时，例如可用 8000M 时，不要把这 8000M 全部分出去！在运行 Minecraft 服务器时，需要在此项的基础上额外占用一部分内存。建议将 -Xms/-Xmx 减少 1000-1500M，以避免内存不够用或者提示 `OOMKiller` 导致服务器强制关闭。同时，这些内存也要给系统预留一部分。**有 8000M 可用？安全起见，请设定 6500M 以确保服务器正常运行。**
 *也有一些服务商会为你额外提供这部分内存，例如提供 9500M 让你分配 8000M 给Minecraft服务器。有一些服务商会提供的！记得问问他们。*  
 
@@ -22,7 +22,7 @@ java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMill
 
 如果分配12GB或更低内存，就不用在上文的基础上额外修改参数了。  
 
-### 如果-Xmx的值大于12GB
+#### 如果-Xmx的值大于12GB
 如果-Xmx的值大于12GB，请调整以下参数：
 -   `-XX:G1NewSizePercent=40`
 -   `-XX:G1MaxNewSizePercent=50`
