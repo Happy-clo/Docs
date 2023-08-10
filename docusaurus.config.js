@@ -49,7 +49,7 @@ const config = {
         items: [
           {
             href: 'https://github.com/Happy-clo/',
-            label: '帮助文档',
+            label: '帮助我们改进文档',
             position: 'right',
           },
         ],
