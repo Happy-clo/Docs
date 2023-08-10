@@ -6,7 +6,7 @@ Paper 使用基于混淆处理的反矿物透视，提供两种模式。可以�
 ### 针对某个世界的配置文件  
 如果你还不了解Paper可以为每个世界进行自定义配置，请花上几分钟了解一下。  
 
-本文将逐步说明如何配置反矿物透视。若要参考文档，请查阅 [针对世界的配置](https://docs.poikcue.com/PaperMC/paper/admin/reference/world-configuration.html#anti-xray)。   
+本文将逐步说明如何配置反矿物透视。若要参考文档，请查阅 [针对世界的配置](https://help.1145.one/Paper-Wiki/admin/reference/world-configuration)。   
 反矿物透视会提供两种模式。`engine-mode: 1` 将为指定维度的指定方块替换为假的方块，例如石头（y<0时为深层）、下界岩或末地岩。而 `engine-mode: 2` 与其恰好相反：将石头（y<0时为深层）、下界岩或末地岩替换为假的矿物方块。    
 下图将说明在使用推荐配置的情况下，开启了矿物透视的玩家在不同模式中将会看到的图片。以下是主世界和下界的截图。  
 ![主世界](https://docs.papermc.io/assets/images/anti-xray-overworld-3443fb41851dc5d9082f2956268232a1.png)
