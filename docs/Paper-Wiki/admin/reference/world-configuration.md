@@ -3,14 +3,14 @@ title: "Paper 针对世界的配置"
 ---
   
 在 `paper-world-defaults.yml` 文件中的每一个配置都可以单独应用于每一个世界。  
-了解如何配置它们，请详见 [配置文件](https://docs.poikcue.com/PaperMC/paper/admin/how-to/configuration.html)  
-对于全局的配置，请见[Paper 全局配置](https://docs.poikcue.com/PaperMC/paper/admin/reference/global-configuration.html)
+了解如何配置它们，请详见 [配置文件](https://help.1145.one/Paper-Wiki/admin/how-to/configuration)  
+对于全局的配置，请见[Paper 全局配置](https://help.1145.one/Paper-Wiki/admin/reference/global-configuration)
 
 ## anticheat
 
 ### anti-xray
 
-#### 关于推荐使用 `engine-mode` `1` 还是 `2` 可以在[配置反矿物透视](https://docs.poikcue.com/PaperMC/paper/admin/how-to/anti-xray.html)中找到。  
+#### 关于推荐使用 `engine-mode` `1` 还是 `2` 可以在[配置反矿物透视](https://help.1145.one/Paper-Wiki/admin/how-to/anti-xray)中找到。  
 
 #### enabled
 
