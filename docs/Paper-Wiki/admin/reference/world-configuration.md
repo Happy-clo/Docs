@@ -10,10 +10,8 @@ title: "Paper 针对世界的配置"
 
 ### anti-xray
 
-::: tip
-关于推荐使用 `engine-mode` `1` 还是 `2` 可以在    
+### 关于推荐使用 `engine-mode` `1` 还是 `2` 可以在    
 [配置反矿物透视](https://docs.poikcue.com/PaperMC/paper/admin/how-to/anti-xray.html)中找到。  
-:::
 
 #### enabled
 
