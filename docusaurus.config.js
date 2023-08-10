@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Happy Wiki',
   tagline: 'Wiki for Happy',
-  url: 'https://wiki.1145.one/',
+  url: 'https://help.1145.one/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -48,7 +48,7 @@ const config = {
         },
         items: [
           {
-            href: 'https://github.com/Happy-clo/',
+            href: 'https://github.com/Happy-clo/Docs',
             label: '帮助我们改进文档',
             position: 'right',
           },
