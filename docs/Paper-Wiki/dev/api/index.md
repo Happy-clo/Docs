@@ -5,7 +5,7 @@ title: "PDC-持久化数据容器"
 译者不是一名 Java 开发者。对于开发部分的翻译无法保证完全正确。  
 建议您阅读[原文档](https://docs.papermc.io/paper/dev/pdc)，将本文（中文翻译）作为参考。  
 如果您是 Java 开发者并熟悉 Bukkit 开发，您可以帮助改进此文档。  
-您可以在 [GitHub Issue](https://github.com/poikcue/docs/issues/new) 留言或提交 [PR](https://github.com/poikcue/docs)    
+您可以在 [GitHub Issue](https://github.com/Happy-clo/Docs/issues/new) 留言或提交 [PR](https://github.com/Happy-clo/Docs/)    
 
 
 持久化数据容器（Persistent Data Container）（PDC）可用于向各种对象附加自定义数据，比如在一个物品，实体或方块对象上存储数据。  
