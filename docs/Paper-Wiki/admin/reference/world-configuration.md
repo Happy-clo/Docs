@@ -4,7 +4,7 @@ title: "Paper 针对世界的配置"
   
 在 `paper-world-defaults.yml` 文件中的每一个配置都可以单独应用于每一个世界。  
 了解如何配置它们，请详见 [配置文件](https://help.1145.one/Paper-Wiki/admin/how-to/configuration)  
-对于全局的配置，请见[Paper 全局配置](https://help.1145.one/Paper-Wiki/admin/reference/global-configuration)
+对于全局的配置，请见 [Paper 全局配置](https://help.1145.one/Paper-Wiki/admin/reference/global-configuration)
 
 ## anticheat
 
