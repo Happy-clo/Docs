@@ -2,7 +2,7 @@
 title: "Paper 全局配置"
 ---
   
-Paper提供的全局配置选项将应用于服务器上的每一个世界，或仅仅是更改服务器本身的工作方式。若想要为每一个世界进行配置，请见[这里](https://docs.poikcue.com/PaperMC/paper/admin/reference/world-configuration.html)。
+Paper提供的全局配置选项将应用于服务器上的每一个世界，或仅仅是更改服务器本身的工作方式。若想要为每一个世界进行配置，请见[这里](https://help.1145.one/Paper-Wiki/admin/reference/world-configuration)。
 
 ## async-chunks
 
