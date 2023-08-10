@@ -17,9 +17,7 @@ title: "配置文件"
 
 * [Pufferfish Configuration (pufferfish.yml)](https://docs.pufferfish.host/setup/pufferfish-fork-configuration/)
 
-::: warning 警告 
 配置中的值可能会多次更改，这就意味着这里的信息不一定是完整的。如果你找不到想要修改的项或出现了某些错误，请在 [Discord](https://purpurmc.org/discord) 上与我们联系。
-:::
 
 ## 全局设定
 
