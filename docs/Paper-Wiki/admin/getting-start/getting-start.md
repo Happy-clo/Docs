@@ -10,7 +10,7 @@
 | 1.17 - 1.20.1 或更高 | Java 17 |
 
 ## 迁移存档到Paper
-### 从Vanilla（原版）迁移：
+#### 从Vanilla（原版）迁移：
 从原版迁移到Paper相当容易，但是存档稍微不同：Paper（或CraftBukkit或Spigot）会将不同的维度单独分成不同的文件夹。  
 但是，不用为此担心！Paper会自动帮助你转换存档。
 
@@ -18,7 +18,7 @@
 > “不用担心” 是指Paper会自动将存档转换为Paper的存档格式。  
 > 但是万一哪天想要从该格式转到原版存档的格式则需要手动转换，因为原版服务端没有提供自动转换功能。
 
-### 从CraftBukkit或Spigot迁移：
+#### 从CraftBukkit或Spigot迁移：
 Paper是CraftBukkit或Spigot开箱即用的替代品（Fork），因此你无需存档担忧。  
   
 ## 下载Paper
