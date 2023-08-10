@@ -13,7 +13,6 @@ title: "配置文件"
 * [Spigot Configuration (spigot.yml)](https://www.spigotmc.org/wiki/spigot-configuration/)
 
 * [Paper Configuration (paper.yml)](https://docs.papermc.io/paper/reference/paper-global-configuration)  
-[Paper 配置文件（paper.yml）](https://docs.poikcue.com/#/PaperMC/Administration/Reference/global-configuration)
 
 * [Pufferfish Configuration (pufferfish.yml)](https://docs.pufferfish.host/setup/pufferfish-fork-configuration/)
 
