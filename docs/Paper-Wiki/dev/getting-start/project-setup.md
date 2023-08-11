@@ -138,12 +138,8 @@ public class ExamplePlugin extends JavaPlugin implements Listener {
 现在，你就有一个将 Paper 作为依赖的插件项目啦！  
 接下来，编译你的插件，然后在 Paper 服务器上运行插件，就大功告成了。   
 
-::: tip  
  如果你想要精简测试插件的流程，你可以使用 [Run-Paper](https://github.com/jpenilla/run-paper) Gradle task。  
  它将帮你自动下载一个 Paper 服务端并运行，以便测试你的插件。  
-:::
 
-::: tip 提示    
 如果你正在使用 IntelliJ，你可以使用 Gradle 图形界面中的 `Build` 菜单来编译你的插件 - 它应该位于你的 IDE 的右上角。  
 编译成功后输出的 jar 文件应该存放在 `build/libs` 文件夹中。  
-:::
