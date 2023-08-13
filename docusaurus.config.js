@@ -130,18 +130,6 @@ const config = {
           },
         ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: '文档',
-            items: [
-              {
-                label: '进入维基',
-                to: '/docs/main',
-              },
-          ],
-      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
