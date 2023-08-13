@@ -143,19 +143,4 @@ const config = {
     }),
 };
 
-
-module.exports = config;},
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-      algolia: {
-        apiKey: '9a34f1ab99b281b2863d5aa483bf4d6c',
-        indexName: 'happy',
-        appId: 'Z5WW3ZRWVZ', // Optional, if you run the DocSearch crawler on your own
-        algoliaOptions: {} // Optional, if provided by Algolia
-      },
-    }),
-};
-
 module.exports = config;
