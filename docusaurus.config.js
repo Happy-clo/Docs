@@ -51,12 +51,6 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'main',
-            position: 'right',
-            label: '主页',
-          },
-          {
             href: 'https://github.com/Happy-clo/Docs',
             label: '帮助我们改进文档',
             position: 'right',
