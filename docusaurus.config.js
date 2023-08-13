@@ -19,7 +19,10 @@ const config = {
   projectName: 'happy-clo.github.io', // Usually your repo name.
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
-
+  i18n: {
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
+  },
   presets: [
     [
       'classic',
