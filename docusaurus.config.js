@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Happy Wiki',
   tagline: 'Wiki for Happy',
-  url: 'https://help.1145.one/',
+  url: 'https://docs.wdsj.one/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -16,7 +16,7 @@ const config = {
   // @ts-ignore
   onBrokenLinks: 'ignore',
   organizationName: 'Happy-clo', // Usually your GitHub org/user name.
-  projectName: 'happy-clo.github.io', // Usually your repo name.
+  projectName: 'Happy-Wiki', // Usually your repo name.
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
   i18n: {
@@ -52,7 +52,7 @@ const config = {
         items: [
           {
             href: 'https://github.com/Happy-clo/Docs',
-            label: '帮助我们改进文档',
+            label: 'Github',
             position: 'right',
           },
         ],
