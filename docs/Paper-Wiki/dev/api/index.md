@@ -124,11 +124,12 @@ public class UUIDDataType implements PersistentDataType<byte[], UUID> {
      }
  }
 ```
-
+:::info 
 为了使用你自己实现的 `PersistentDataType`，你必须在调用 PDC 的 set/get/has 方法时传入你的 `PersistentDataType` 实例作为参数。  
 ```java
 container.set(key, new UUIDDataType(), uuid);
 ```
+:::
 
 ## 获取各种 `PersistentDataHolder` 所对应的 PDC 
 
@@ -148,7 +149,7 @@ container.set(key, new UUIDDataType(), uuid);
             chest.update();
         }
       ```
-      ::: tip 译者注  
+      :::tip 译者注  
       方块的“数据”其实是借助实体保存的。比如对一个箱子而言，实际上存在一个箱子 `TileEntity` 实体，这个实体保存了物品栏数据。同理，PDC 数据也存储在这个实体上。不是每一种方块都有“数据”。只有那些 `BlockState` 为 `TileState` 子类的方块才有“数据”。只能对这类方块获取其 PDC 数据。  
       :::  
 
