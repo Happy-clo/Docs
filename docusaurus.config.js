@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Happy Wiki',
-  tagline: 'Wiki for Happy',
+  title: 'Happy Docs',
+  tagline: 'Docs for Happy',
   url: 'https://docs.wdsj.one/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -16,7 +16,7 @@ const config = {
   // @ts-ignore
   onBrokenLinks: 'ignore',
   organizationName: 'Happy-clo', // Usually your GitHub org/user name.
-  projectName: 'Happy-Wiki', // Usually your repo name.
+  projectName: 'Happy-Docs', // Usually your repo name.
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
   i18n: {
@@ -54,6 +54,11 @@ const config = {
             href: 'https://github.com/Happy-clo/Docs',
             label: 'Github',
             position: 'right',
+          },
+          {
+            href: 'https://docs.wdsj.one/',
+            label: '主页',
+            position: 'left',
           },
         ],
       },
