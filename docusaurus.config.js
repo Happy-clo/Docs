@@ -56,6 +56,16 @@ const config = {
             position: 'right',
           },
           {
+            href: 'https://chat.wdsj.one/',
+            label: 'ChatWeb',
+            position: 'right',
+          },
+          {
+            href: 'https://bing.wdsj.one/',
+            label: 'Bing',
+            position: 'right',
+          },
+          {
             href: 'https://docs.wdsj.one/',
             label: '主页',
             position: 'left',
