@@ -51,9 +51,9 @@ const config = {
         },
         items: [
           {
-            href: 'https://github.com/Happy-clo/Docs',
-            label: 'Github',
-            position: 'right',
+            href: 'https://docs.wdsj.one/',
+            label: '主页',
+            position: 'left',
           },
           {
             href: 'https://chat.wdsj.one/',
@@ -64,11 +64,6 @@ const config = {
             href: 'https://bing.wdsj.one/',
             label: 'Bing',
             position: 'right',
-          },
-          {
-            href: 'https://docs.wdsj.one/',
-            label: '主页',
-            position: 'left',
           },
         ],
       },
