@@ -131,7 +131,3 @@ RegisterCommands:
       example: 'open: example'
 ```
 
-## 语言
-
-TODO
-
