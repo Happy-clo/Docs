@@ -9,8 +9,6 @@ description: TrMenu 的菜单支持将触发命令后缀的参数作为变量使
 
 若遇到命令不兼容情况，可以通过选项关闭
 
-{% page-ref page="../menu/configuration/option.md" %}
-
 ## 传递方式
 
 * 绑定的自定义开启命令传递
