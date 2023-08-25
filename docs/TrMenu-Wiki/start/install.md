@@ -37,7 +37,7 @@ TrMenu 需要在联网条件下载安装
 
 ## 注意
 
-{% hint style="warning" %}
+:::warning
 TrMenu **不支持**一切形式的**热重载**，
 
 强行进行热重载操作可能引发未知错误，请谨慎操作
@@ -46,5 +46,5 @@ TrMenu **不支持**一切形式的**热重载**，
 
 * 通过 Plugman\(或类似插件\) 热重载 TrMenu
 * 通过 /reload \(confirm\) 指令重启服务端
-{% endhint %}
+:::
 
