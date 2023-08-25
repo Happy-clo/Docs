@@ -3,6 +3,7 @@ title: "Example"
 ---
 
 > 以下代码依照 TabooLib 插件方式演示
+<pre>
 ```kotlin
 package com.github.username
 
@@ -23,3 +24,4 @@ object Demo {
     
 }
 ```
+</pre>
