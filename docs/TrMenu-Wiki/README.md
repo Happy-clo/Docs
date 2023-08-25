@@ -1,5 +1,5 @@
 ---
-title: "权限"
+title: "首页"
 description: 欢迎查阅 TrMenu 公开文档
 ---
 
@@ -26,5 +26,5 @@ TrMenu 是基于 [TabooLib](https://docs.tabooproject.org/) 开发，发布于 *
 
 本文档可能更偏向技术性说明，入门者可以尝试配合查看以下**社区文档**方便理解上手
 
-{% embed url="https://wiki.ptms.ink/index.php?title=%E7%A4%BE%E5%8C%BA:TrMenu" caption="TrMenu 社区教程" %}
+[TrMenu 社区教程](https://wiki.ptms.ink/index.php?title=%E7%A4%BE%E5%8C%BA:TrMenu%22)
 
