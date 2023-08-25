@@ -4,7 +4,7 @@ title: "快速绑定"
 
 ## 配置
 
-{% code title="settings.yml" %}
+**settings.yml**
 ```yaml
 Shortcuts:
   Offhand: []
@@ -18,7 +18,6 @@ Shortcuts:
   PlayerInventory-Border-Right: [ ]
   PlayerInventory-Border-Middle: [ ]
 ```
-{% endcode %}
 
 ## 类型
 

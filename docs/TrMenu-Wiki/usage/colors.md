@@ -1,5 +1,5 @@
 ---
-tirle: "多彩颜色"
+title: "多彩颜色"
 description: TrMenu 菜单文件字符串颜色代码
 ---
 

@@ -5,9 +5,9 @@ description: 从正规渠道获取到本插件的 JAR 文件后，安装到服�
 
 ## 需求
 
-{% hint style="info" %}
+:::tip info
 TrMenu 需要在联网条件下载安装
-{% endhint %}
+:::
 
 | 服务端 | 版本 |
 | :--- | :--- |

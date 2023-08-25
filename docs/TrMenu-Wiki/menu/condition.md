@@ -29,9 +29,8 @@ Kether 表达式直接使用，JavaScript 表达式需加以 `js:`  前缀且规
 
 ## 进阶
 
-{% page-ref page="../script/kether.md" %}
-
-{% page-ref page="../script/javascript.md" %}
+[JavaScript](https://docs.wdsj.one/TrMenu-Wiki/script/javascript)
+[Kether](https://docs.wdsj.one/TrMenu-Wiki/script/kether)
 
 > 深入了解两种语法的结构和在 TrMenu 中的应用场景，制作更强大的菜单
 

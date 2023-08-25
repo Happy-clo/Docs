@@ -5,37 +5,34 @@ description: 初次安装本插件后，会在插件目录下产生一些文件
 
 ## 文件
 
-{% tabs %}
-{% tab title="lang/zh\_CN.yml" %}
-TLocale 语言文件, 你可以编辑本插件几乎所有的消息
-{% endtab %}
+#### lang/zh_CN.yml
 
-{% tab title="data/globalData.yml" %}
+TLocale 语言文件，你可以编辑本插件几乎所有的消息
+
+#### data/globalData.yml
+
 全局缓存数据变量存储的地方
 
 服务器开启状态下请勿编辑
-{% endtab %}
 
-{% tab title="data/itemRepository.yml" %}
+#### data/itemRepository.yml
+
 物品仓库数据存储的地方
 
 服务器开启状态下请勿编辑
-{% endtab %}
 
-{% tab title="menus" %}
+#### menus
+
 默认的菜单加载目录
 
 菜单文件（YAML）可放在该目录或其子目录下，将会被插件自动加载
-{% endtab %}
 
-{% tab title="settings.yml" %}
+#### settings.yml
+
 TrMenu 的主配置文件
-{% endtab %}
-{% endtabs %}
 
 ## 设置
 
-{% code title="settings.yml \(v3.0 BETA-2\)" %}
 ```yaml
 #
 # 插件的选项
@@ -133,7 +130,6 @@ RegisterCommands:
     arguments:
       example: 'open: example'
 ```
-{% endcode %}
 
 ## 语言
 

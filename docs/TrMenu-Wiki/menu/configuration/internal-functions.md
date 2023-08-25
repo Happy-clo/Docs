@@ -3,9 +3,9 @@ title: "内置函数"
 description: 内置 JavaScript 函数是菜单配置 Functions 节点下的自定义脚本
 ---
 
-{% hint style="info" %}
+:::info
 使用本功能，需要有一些 JavaScript 语法基础
-{% endhint %}
+:::
 
 ## 示例
 
