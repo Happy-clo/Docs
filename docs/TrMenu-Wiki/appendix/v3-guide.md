@@ -61,10 +61,6 @@ source:ORAXEN:itemId
 > 2. 没有规范缓存、变量处理
 > ```
 
-#### 函数
-
-{% page-ref page="../usage/functions.md" %}
-
 #### 动作
 
 * **ActionBound** 弃用 v1 遗留的 \_\|\|\_ 写法，现阶段统一为 `&&&`
@@ -87,8 +83,6 @@ source:ORAXEN:itemId
 * 性能损耗统计功能重写
 * 菜单列表格式化
 * 调试功能重写 Mirror & Dump 功能集成到 Debug 下
-
-{% page-ref page="../usage/command.md" %}
 
 #### API
 
