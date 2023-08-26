@@ -62,7 +62,7 @@ const config = {
           },
           {
             href: 'https://bing.wdsj.one/',
-            label: 'Bing ChatWeb',
+            label: 'Bing',
             position: 'right',
           },
         ],
