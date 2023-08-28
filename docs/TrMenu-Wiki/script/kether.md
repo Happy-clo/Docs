@@ -4,7 +4,7 @@ title: "Kether"
 
 ## 学习
 
-[KetherX 中文文档](https://kether.tabooproject.org%22/)
+[KetherX 中文文档](https://kether.tabooproject.org/)
 
 ## 注意
 
