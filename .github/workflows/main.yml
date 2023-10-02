@@ -1,42 +1,25 @@
-name: CI
-
+name: Build and Deploy
+permissions:
+  contents: write
 on:
   push:
     branches:
       - main
 jobs:
-  build:
+  deploy:
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Use Node.js v18.5
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.5.0'
-
-      #使用缓存
-      - name: Cache node modules
-        uses: actions/cache@v1
-        id: cache
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Install Dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn install
-      
-      - name: Build Project
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
+          yarn install
           yarn run build
-      - name: Github page Deploy
-        uses: wrm244/docusaurus-deploy-action@master # 
-        env:
-          PERSONAL_TOKEN: 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
-          PUBLISH_REPOSITORY: Happy-clo/Docs # 公共仓库，格式：GitHub 用户名/仓库名
-          BRANCH: gh-pages # 部署分支
-          PUBLISH_DIR: ./build # 部署 ./build 目录下的文件
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          clean: false
