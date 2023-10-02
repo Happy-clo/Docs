@@ -1,0 +1,42 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js v18.5
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.5.0'
+
+      #使用缓存
+      - name: Cache node modules
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install
+      
+      - name: Build Project
+        run: |
+          yarn run build
+      - name: Github page Deploy
+        uses: wrm244/docusaurus-deploy-action@master # 
+        env:
+          PERSONAL_TOKEN: ${{ secrets.PERSION_TOKEN }} # 你的Github个人账号密钥
+          PUBLISH_REPOSITORY: Happy-clo/Docs # 公共仓库，格式：GitHub 用户名/仓库名
+          BRANCH: gh-pages # 部署分支
+          PUBLISH_DIR: ./next # 部署 ./build 目录下的文件
