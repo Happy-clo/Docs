@@ -2,11 +2,12 @@
 <!-- File auto-generated on Fri Dec 01 19:16:17 CET 2017. See docs/permissions/permission_nodes.tpl.md -->
 
 ## AuthMe 权限
-下列权限为最新的AuthMe构建版本所支持
 
-- **authme.admin.*** – 所有权限
+下列权限为最新的 AuthMe 构建版本所支持
+
+- **authme.admin.\*** – 所有权限
 - **authme.admin.accounts** – 查看与某玩家相关的所有账户
-- **authme.admin.antibotmessages** – 可查看防小号AntiBot的相关消息
+- **authme.admin.antibotmessages** – 可查看防小号 AntiBot 的相关消息
 - **authme.admin.backup** – 使用备份指令
 - **authme.admin.changemail** – 设置或更改一个玩家绑定的邮箱
 - **authme.admin.changepassword** – 更改一个玩家的密码
@@ -14,7 +15,7 @@
 - **authme.admin.firstspawn** – 传送到最初的 AuthMe 出生点
 - **authme.admin.forcelogin** – 强制一个已存在的玩家登录
 - **authme.admin.getemail** – 查看一个玩家的邮箱（如果设置了）
-- **authme.admin.getip** – 查看一个玩家的上一个已知IP
+- **authme.admin.getip** – 查看一个玩家的上一个已知 IP
 - **authme.admin.lastlogin** – 查看一个玩家上一次登录的日期时间
 - **authme.admin.purge** – 清除旧的插件数据
 - **authme.admin.purgebannedplayers** – 清除被封禁玩家的数据
@@ -41,12 +42,12 @@
 - **authme.debug.group** – 查看权限组
 - **authme.debug.limbo** – 查看未登录玩家数据
 - **authme.debug.mail** – 使用邮箱发送测试
-- **authme.debug.mysqldef** – 改变MySQL栏的空置状态
+- **authme.debug.mysqldef** – 改变 MySQL 栏的空置状态
 - **authme.debug.perm** – 使用权限检查
 - **authme.debug.spawn** – 查看出生点信息
 - **authme.debug.stats** – 查看统计部分
 - **authme.debug.valid** – 使用简单确认
-- **authme.player.*** – 可使用全部玩家权限（不包括管理员权限）
+- **authme.player.\*** – 可使用全部玩家权限（不包括管理员权限）
 - **authme.player.canbeforced** – 强制玩家登录
 - **authme.player.captcha** – 使用验证码
 - **authme.player.changepassword** – 更改密码
@@ -62,7 +63,6 @@
 - **authme.player.seeownaccounts** – 查看自己的其它账户
 - **authme.player.unregister** – 解除注册
 - **authme.vip** – 当服务器已满而有此权限的玩家进服时, 服内会有随机玩家被踢出
-
 
 ---
 

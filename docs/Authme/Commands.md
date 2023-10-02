@@ -2,6 +2,7 @@
 <!-- File auto-generated on Fri Dec 01 19:16:15 CET 2017. See docs/commands/commands.tpl.md -->
 
 ## AuthMe 指令
+
 你可以使用以下指令来体验 AuthMe 的各种特性. 必须的参数会用 `< >` 标出
 可选的参数会用 (`[ ]`) 标出
 
@@ -16,13 +17,13 @@
   <br />需要权限 `authme.admin.changepassword`
 - **/authme lastlogin** [player]: 查看玩家上次登录的时间
   <br />需要权限 `authme.admin.lastlogin`
-- **/authme accounts** [player]: 查看该玩家或者该玩家所登IP牵涉到的所有账户
+- **/authme accounts** [player]: 查看该玩家或者该玩家所登 IP 牵涉到的所有账户
   <br />需要权限 `authme.admin.accounts`
 - **/authme email** [player]: 查看该玩家绑定的邮箱
   <br />需要权限 `authme.admin.getemail`
 - **/authme setemail** &lt;player> &lt;email>: 改变该玩家绑定的邮箱
   <br />需要权限 `authme.admin.changemail`
-- **/authme getip** &lt;player>: 查看一个在线玩家的IP
+- **/authme getip** &lt;player>: 查看一个在线玩家的 IP
   <br />需要权限 `authme.admin.getip`
 - **/authme spawn**: 传送至出生点
   <br />需要权限 `authme.admin.spawn`
@@ -38,7 +39,7 @@
   <br />需要权限 `authme.admin.purgeplayer`
 - **/authme backup**: 创建一个已注册玩家的数据备份
   <br />需要权限 `authme.admin.backup`
-- **/authme resetpos** &lt;player/*>: 清除该玩家上一个已知的位置，或者全部位置
+- **/authme resetpos** &lt;player/\*>: 清除该玩家上一个已知的位置，或者全部位置
   <br />需要权限 `authme.admin.purgelastpos`
 - **/authme purgebannedplayers**: 清除所有被封禁玩家的 AuthMeReloaded 数据
   <br />需要权限 `authme.admin.purgebannedplayers`
@@ -53,7 +54,7 @@
   <br />需要权限 `authme.admin.updatemessages`
 - **/authme recent**: 显示上一个登录的玩家
   <br />需要权限 `authme.admin.seerecent`
-- **/authme debug** [child] [arg] [arg]: Debug以及相关操作
+- **/authme debug** [child] [arg] [arg]: Debug 以及相关操作
   <br />需要权限 `authme.debug.command`
 - **/authme help** [query]: 查看 /authme 指令的详细帮助
 - **/email**: AuthMeReloaded 邮箱验证基础指令
@@ -91,7 +92,6 @@
 - **/verification** &lt;code>: 完成 AuthMeReloaded 的验证过程
   <br />需要权限 `authme.player.security.verificationcode`
 - **/verification help** [query]: 查看 /verification 指令的详细帮助
-
 
 ---
 

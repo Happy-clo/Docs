@@ -1,4 +1,5 @@
 ## 原理
+
 单元测试用于测试一个单元：一个特定的类、方法被测试，来保证其中的逻辑合乎我们的预期。相反，集成测试保证两个以上的部件交互正常。
 
 单元测试不需要保证运行的顺序 - 既不是一个类中的方法的顺序、也不是测试类中的顺序。单元测试不应该依赖于先前的测试建立。这是因为测试全部通过但运行时出错经常就是这个原因。
@@ -25,11 +26,12 @@
 
 Mockito 不能模拟所有的类和方法 - 类和方法不能是 `final` 的，方法也不能是 `static` 的。
 
-静态的方法适用于轻量的工具类（没有状态，没有重量级操作如执行I/O）以及 logger。
+静态的方法适用于轻量的工具类（没有状态，没有重量级操作如执行 I/O）以及 logger。
 
 ## 示例
 
 注意以下的测试仅仅为模拟的，不对应任何 AuthMe 中的类。给出以下方法：
+
 ```java
 public static boolean isLoggedIn(CommandSender sender) {
   if (sender == null || !(sender instanceof Player)) {
@@ -38,7 +40,9 @@ public static boolean isLoggedIn(CommandSender sender) {
   return Status.LOGGED_IN.equals(((Player) sender).getStatus());
 }
 ```
+
 你可能想要测试这个方法在 sender 不是 `Player` 类的实例时返回 `false` ，比如这个实例为 `Console` 。
+
 ```java
 @Test
 public void shouldReturnFalseForNonPlayerSender() {

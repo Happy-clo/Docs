@@ -1,4 +1,4 @@
-## 在linux操作系统基础上编译和安装 argon2 
+## 在 linux 操作系统基础上编译和安装 argon2
 
 ```bash
 git clone https://www.github.com/P-H-C/phc-winner-argon2.git argon2-src;
@@ -21,11 +21,11 @@ cd argon2-src && sudo make && sudo make install;
 
 `$ nix-env -iA nixos.libargon2`
 
-#### OpenSUSE## 
+#### OpenSUSE##
 
 `$ zypper install argon2-devel`
 
-## 在Windows上编译和安装 argon2 库: 
+## 在 Windows 上编译和安装 argon2 库:
 
 **按理来讲 : 安装 [MINGW for Windows](https://sourceforge.net/projects/mingw/files/Installer/) 以及 [Git Bash for Windows](https://git-for-windows.github.io/), 以 _管理员身份_ 打开 git bash 并执行以下操作:**
 
@@ -36,8 +36,9 @@ cd argon2-src && make && make install;
 
 我们写的是 按理来讲 ，因为 Makefile 与 MINGW 有关，所以我们不能正确的测试编译
 
-## 修改你的 authme config.yml: 
+## 修改你的 authme config.yml:
+
 ```yaml
-    security:
-        passwordHash: 'ARGON2'
+security:
+  passwordHash: "ARGON2"
 ```

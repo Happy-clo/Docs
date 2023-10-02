@@ -4,6 +4,7 @@
 - 最大行宽度：120 个字符
 
 Java 日常规范：
+
 - 类名应该是大驼峰式的（CamelCase）
 - 方法名、字段名和变量应该是小驼峰式的（camelCase）
 
@@ -38,11 +39,12 @@ scheduler.scheduleSyncTaskLater(new LoginTask());
 
 ## JavaDoc
 
-使用第三人称（"Gets the player's name"）或者祈使的语气（"Get the player's name"）；整个类中都应该这么写。Javadocs 应该简要的解释这个方法是干什么的，并向开发者提供进一步的信息。 
+使用第三人称（"Gets the player's name"）或者祈使的语气（"Get the player's name"）；整个类中都应该这么写。Javadocs 应该简要的解释这个方法是干什么的，并向开发者提供进一步的信息。
 
 在 `@param` 和描述之间留一个空行。
 
 示例：
+
 ```java
     /**
      * 添加执行此命令需要的权限节点

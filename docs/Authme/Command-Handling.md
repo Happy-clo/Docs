@@ -8,7 +8,7 @@
 
 ### 命令注册
 
-我们使用 `CommandDescription` 对象来定义 AuthMe 中可用的命令。这些对象不含有任何命令的逻辑，但是含有所有执行此命令必须的信息：使用命令的 label（比如必须使用 `/authme register` 或者 `/authme reg`），参数的长度，以及一个到实际命令实现的引用。 
+我们使用 `CommandDescription` 对象来定义 AuthMe 中可用的命令。这些对象不含有任何命令的逻辑，但是含有所有执行此命令必须的信息：使用命令的 label（比如必须使用 `/authme register` 或者 `/authme reg`），参数的长度，以及一个到实际命令实现的引用。
 
 ### 映射输入的命令
 
@@ -16,7 +16,7 @@
 
 在 AuthMe 中，我们称 _labels_ 为命令的第一个单词，所以在 `/authme register billy pass123` 中，label 为 `authme, register` 因为他们指向了管理员注册的命令。在一开始，我们还不知道哪个是 label 哪个是参数，所以我们直接以 _命令部分_ 代指它们。
 
-第一件事是决定哪个_部分_是 _labels_ 抑或 _参数_ 。如果这一部分可以映射到一个命令描述对象（`CommandDescription`）并且参数的长度是正确的，我们就称之为一个成功的映射。比如，`/authme register billy pass123` 指向了对于管理注册的命令的描述，并且剩下了两个参数 `billy, pass123` 。这个命令描述定义了两个强制的参数，所以参数匹配，我们成功地进行了一次映射。
+第一件事是决定哪个*部分*是 _labels_ 抑或 _参数_ 。如果这一部分可以映射到一个命令描述对象（`CommandDescription`）并且参数的长度是正确的，我们就称之为一个成功的映射。比如，`/authme register billy pass123` 指向了对于管理注册的命令的描述，并且剩下了两个参数 `billy, pass123` 。这个命令描述定义了两个强制的参数，所以参数匹配，我们成功地进行了一次映射。
 
 **安全推测：** 在编程中，假定最多两个 label 就能够访问某个命令（比如 `/authme register`，又比如说 `/authme user register` - 这有三个 label，是不可能发生的）。任何更多的参数都可能复杂化我们的命令结构和代码结构。有一个测试检测我们的命令描述（`CommandDescription`）初始化为大于两个参数。尽管如此，你仍然可以自行编写处理命令的逻辑，如果不是太复杂的话。
 

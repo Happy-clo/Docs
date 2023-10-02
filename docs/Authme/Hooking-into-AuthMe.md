@@ -3,11 +3,13 @@
 ### API
 
 我们提供了在 AuthMe 中执行指令和查询的 API，参见 [AuthMeApi](http://ci.xephi.fr/job/AuthMeReloaded/javadoc/fr/xephi/authme/api/v3/AuthMeApi.html) 。你可以通过以下方式得到 `AuthMeApi` 对象：
+
 ```java
 import fr.xephi.authme.api.v3.AuthMeApi;
 // ...
 AuthMeApi authmeApi = AuthMeApi.getInstance();
 ```
+
 其他的方法在 Javadocs 都有提及（查看上方链接）。
 
 ### 事件
