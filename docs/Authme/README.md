@@ -1,3 +1,7 @@
+---
+title: "AuthMeReloaded Wiki"
+---
+
 欢迎来到 AuthMeReloaded 的维基百科！
 
 AuthMe 用户快速链接:

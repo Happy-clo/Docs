@@ -1,7 +1,3 @@
----
-title: "LuckPerms Wiki"
----
-
 欢迎来到 LuckPerms wiki。这里你将会找到本插件的完整的使用文档，包括了安装、设置、配置和如何高效的使用 LuckPerms。
 
 ### 从何开始?
