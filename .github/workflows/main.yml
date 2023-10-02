@@ -39,4 +39,4 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.PERSION_TOKEN }} # 你的Github个人账号密钥
           PUBLISH_REPOSITORY: Happy-clo/Docs # 公共仓库，格式：GitHub 用户名/仓库名
           BRANCH: gh-pages # 部署分支
-          PUBLISH_DIR: ./next # 部署 ./build 目录下的文件
+          PUBLISH_DIR: ./build # 部署 ./build 目录下的文件
