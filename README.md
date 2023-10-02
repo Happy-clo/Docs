@@ -1,1 +1,1 @@
-# Plugin & Server docs
+# Plugin & Help docs
