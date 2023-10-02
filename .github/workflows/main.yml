@@ -36,7 +36,7 @@ jobs:
       - name: Github page Deploy
         uses: wrm244/docusaurus-deploy-action@master # 
         env:
-          PERSONAL_TOKEN: ${{ secrets.PERSION_TOKEN }} # 你的Github个人账号密钥
+          PERSONAL_TOKEN: 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 # 你的Github个人账号密钥
           PUBLISH_REPOSITORY: Happy-clo/Docs # 公共仓库，格式：GitHub 用户名/仓库名
           BRANCH: gh-pages # 部署分支
           PUBLISH_DIR: ./build # 部署 ./build 目录下的文件
