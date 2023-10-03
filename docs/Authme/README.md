@@ -6,10 +6,9 @@ title: "AuthMeReloaded Wiki"
 
 AuthMe 用户快速链接:
 
-- [AuthMe releases (Jenkins)](AuthMe-Releases-Jenkins.md) &ndash; 如何获得最新版的 AuthMe
-- [Breaking changes](Breaking-Changes.md)
-- [Available commands](Commands.md)
-- [Permission nodes](Permissions.md)
-- [Hash algorithms](Hash-Algorithm.md)
+- [AuthMe 发布版](AuthMe 发布版.md) &ndash; 如何获得最新版的 AuthMe
+- [大更新](更新记录/大更新.md)
+- [命令](命令.md)
+- [权限节点](权限节点.md)
 
 您可以在右侧的栏目中找到所有 Wiki 页面。

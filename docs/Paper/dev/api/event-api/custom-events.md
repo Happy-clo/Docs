@@ -2,14 +2,14 @@
 title: "自定义事件"
 ---
 
-创建自定义事件是为你的插件添加新功能的不错的方式。    
+创建自定义事件是为你的插件添加新功能的不错的方式。  
 这将允许其它插件监听你的自定义事件并为你的插件添加新功能。
 
 ## 创建一个自定义事件
 
 要创建一个自定义事件，你需要创建一个继承 `Event` 的类。每个事件都要求有一个 `HandlerList` 以存储所有监听该事件的监听器。  
 唯一一种例外情况是某个事件被有意设计为不可监听以便作其他事件的父类所用。比如 `BlockPistonEvent` 没有 `HandlerList`，所以不能被监听。  
-HandlerList 用于在事件被触发时，调用所有的监听器。  
+HandlerList 用于在事件被触发时，调用所有的监听器。
 
 译注：虽然不能直接监听“活塞事件”，但是可以监听“活塞推出事件”和“活塞收回事件”。同理，尽管无法直接监听“玩家事件”，但是可以监听“玩家加入事件”、“玩家退出事件”等等。 `BlockPistonEvent` 是一个抽象类，自然不会用于直接监听。即使其不是抽象类也不能用于直接监听。
 
@@ -59,7 +59,7 @@ public class PaperIsCoolEvent extends Event {
     public Component getMessage() {
         return this.message;
     }
-    
+
     public void setMessage(Component message) {
         this.message = message;
     }
@@ -68,7 +68,7 @@ public class PaperIsCoolEvent extends Event {
 
 ## 调用事件
 
-既然我们已经创建好了这个事件，我们接下来就可以触发它。  
+既然我们已经创建好了这个事件，我们接下来就可以触发它。
 
 ```java
 public class ExamplePlugin extends JavaPlugin {
@@ -127,8 +127,9 @@ public class ExamplePlugin extends JavaPlugin {
     }
 }
 ```
-当一个事件是可以被取消的，并且事件已经被取消了，`Event#callEvent` 方法会返回 `false`。这就允许你直接在 if 语句中使用 `callEvent` 方法的返回值，无需再调用  `Cancellable#isCancelled` 方法手动检查了。  
-  
+
+当一个事件是可以被取消的，并且事件已经被取消了，`Event#callEvent` 方法会返回 `false`。这就允许你直接在 if 语句中使用 `callEvent` 方法的返回值，无需再调用 `Cancellable#isCancelled` 方法手动检查了。
+
 ```java
 
 public class ExamplePlugin extends JavaPlugin {

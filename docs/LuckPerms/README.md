@@ -12,5 +12,5 @@ title: "LuckPerms Wiki"
 
 ### 一些有用的链接
 
-- [**开发构建**](https://ci.lucko.me/job/LuckPerms)
-- [**Javadocs**](https://luckperms.lucko.me/javadocs/)
+- [**开发构建**](https://ci.lucko.me/job/LuckPerms/)
+- [**Javadocs**](https://javadoc.io/static/net.luckperms/api/5.4/net/luckperms/api/LuckPerms.html)
