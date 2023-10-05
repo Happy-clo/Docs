@@ -3,6 +3,7 @@ title: "API"
 ---
 
 Maven:
+
 ```xml
 <repositories>
     <repository>
@@ -22,6 +23,7 @@ Maven:
 ```
 
 Gradle Kotlin DSL
+
 ```kotlin
 repositories {
     maven("https://repo.mcage.cn/repository/maven-public/")

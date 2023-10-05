@@ -4,7 +4,9 @@ description: TrMenu 内置事件
 ---
 
 ## CustomDatabaseEvent
-* 自定义数据库
+
+- 自定义数据库
+
 ```kotlin
 package me.arasple.mc.trmenu.api.event
 
@@ -22,9 +24,10 @@ class CustomDatabaseEvent(val name: String, var database: Database? = null) : Bu
 }
 ```
 
-
 ## MenuOpenEvent
-* 菜单打开事件
+
+- 菜单打开事件
+
 ```kotlin
 package me.arasple.mc.trmenu.api.event
 
@@ -60,9 +63,10 @@ class MenuOpenEvent(val session: MenuSession, val menu: Menu, val page: Int, val
 }
 ```
 
-
 ## MenuPageChangeEvent
-* 菜单翻页事件
+
+- 菜单翻页事件
+
 ```kotlin
 package me.arasple.mc.trmenu.api.event
 
@@ -76,9 +80,10 @@ import taboolib.platform.type.BukkitProxyEvent
 class MenuPageChangeEvent(val session: MenuSession, val from: Int, val to: Int, val override: Boolean) : BukkitProxyEvent()
 ```
 
-
 ## MenuCloseEvent
-* 菜单关闭事件
+
+- 菜单关闭事件
+
 ```kotlin
 package me.arasple.mc.trmenu.api.event
 

@@ -3,32 +3,37 @@ title: "Paper 系统配置"
 ---
 
 ### 阅读前提醒
-我不是一名Java开发者。以下的所有涉及Java或者其它术语我都不是很清楚。  
+
+我不是一名 Java 开发者。以下的所有涉及 Java 或者其它术语我都不是很清楚。  
 因此我并不是很推荐阅读此页文档。如果你是开发人员，请阅读 [Paper System Properties](https://docs.papermc.io/paper/reference/system-properties)  
 以了解。对于完全不确定的翻译，下面有原文。
 
 这些系统配置可以在启动服务器之前就可以为不同项进行配置。
 
 ### 警告
-为JVM设定 flags 可以更改其工作方式，Paper服务器也不例外。  
-如果你不确定某个Flag的作用，**不要轻易使用它**！  
+
+为 JVM 设定 flags 可以更改其工作方式，Paper 服务器也不例外。  
+如果你不确定某个 Flag 的作用，**不要轻易使用它**！
 
 ## 工作原理
 
-系统配置在启动服务器时就已经设置好了。例如，如果你正在使用 `.bat` 或是 `.sh` 文件以启动服务器，你可以在文件中添加System Properties的相关参数。比如：
+系统配置在启动服务器时就已经设置好了。例如，如果你正在使用 `.bat` 或是 `.sh` 文件以启动服务器，你可以在文件中添加 System Properties 的相关参数。比如：
 
 ```bash
 java -Dpaper.log-level=FINE -jar paper.jar
 ```
+
 ### 信息
-部分Paper系统配置项需要带上一个“.”。  
-在使用Windows Powershell时，需要拿双引号把它裹上。  
+
+部分 Paper 系统配置项需要带上一个“.”。  
+在使用 Windows Powershell 时，需要拿双引号把它裹上。  
 比如 `"-Dpaper.log-level=FINE"`
 
 这里的 `-D` 用于设置环境属性，而系统属性则是带着 `FINE` 值的 `paper.log-level`。  
 要使用，仅需将其加入到启动命令中即可。
 
 ### 注意
+
 当一个 system property 用 `unset` 表示时，更改为 `true` 就可以用它了。
 
 ## Properties 列表
@@ -41,7 +46,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### timings.bypassMax:
 
 - **默认值**: `unset`
-- **描述**: 允许绕过Aikar的Timings API的最大数据限制。除非API更改为允许绕过，否则仅在服务器更改是无效的。
+- **描述**: 允许绕过 Aikar 的 Timings API 的最大数据限制。除非 API 更改为允许绕过，否则仅在服务器更改是无效的。
 
 #### LetMeReload:
 
@@ -51,7 +56,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### paper.disableChannelLimit:
 
 - **默认值**: `unset`
-- **描述**: 禁用服务器插件通道限制。将禁用每名玩家128插件通道的限制。
+- **描述**: 禁用服务器插件通道限制。将禁用每名玩家 128 插件通道的限制。
 
 #### net.kyori.adventure.text.warnWhenLegacyFormattingDetected:
 
@@ -61,23 +66,23 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### Paper.DisableClassPrioritization:
 
 - **默认值**: `unset`
-- **描述**: 禁用类优先级系统，主要是解决未能正确处理relocate和shade的问题。
+- **描述**: 禁用类优先级系统，主要是解决未能正确处理 relocate 和 shade 的问题。
 
 #### Paper.disableFlushConsolidate:
 
 - **默认值**: `unset`
-- **描述**: 禁用Netty Flush Consolidation系统。
+- **描述**: 禁用 Netty Flush Consolidation 系统。
 - **原文**: Disables the netty flush consolidation system.
 
 #### Paper.debugDynamicMissingKeys:
 
 - **默认值**: `unset`
-- **描述**: 启用在NBT对象中为缺失键记录调试日志。
+- **描述**: 启用在 NBT 对象中为缺失键记录调试日志。
 
 #### disable.watchdog:
 
 - **默认值**: `unset`
-- **描述**: 禁用Watchdog警告系统。
+- **描述**: 禁用 Watchdog 警告系统。
 
 #### paper.explicit-flush:
 
@@ -112,12 +117,12 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### paper.ticklist-warn-on-excessive-delay:
 
 - **默认值**: `unset`
-- **描述**: 当Tick列表延时过长时启用警告。
+- **描述**: 当 Tick 列表延时过长时启用警告。
 
 #### debug.rewriteForIde:
 
 - **默认值**: `unset`
-- **描述**: 在堆栈跟踪中移除NMS更改以在IDE中方便调试。也会remap CB插件调用以移除版本信息。
+- **描述**: 在堆栈跟踪中移除 NMS 更改以在 IDE 中方便调试。也会 remap CB 插件调用以移除版本信息。
 
 #### convertLegacySigns:
 
@@ -158,17 +163,17 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### io.papermc.paper.suppress.sout.nags:
 
 - **默认值**: `unset`
-- **描述**: 禁止插件使用System.out/System.err输出消息。
+- **描述**: 禁止插件使用 System.out/System.err 输出消息。
 
 #### paper.strict-thread-checks:
 
 - **默认值**: `unset`
-- **描述**: 设定AsyncCatcher的状态，若代码在非主线程上运行时将记录错误。
+- **描述**: 设定 AsyncCatcher 的状态，若代码在非主线程上运行时将记录错误。
 
 #### Paper.skipServerPropertiesComments:
 
 - **默认值**: `unset`
-- **描述**: 跳过server.properties中的注释。
+- **描述**: 跳过 server.properties 中的注释。
 
 #### Paper.debugInvalidSkullProfiles:
 
@@ -178,7 +183,7 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### paper.alwaysPrintWarningState:
 
 - **默认值**: `unset`
-- **描述**: 是否始终为特定level打印警告。
+- **描述**: 是否始终为特定 level 打印警告。
 - **原文**: Always prints the warning state for the particular level.
 
 #### Paper.printStacktraceOnBadPluginClassAccess:
@@ -189,4 +194,4 @@ java -Dpaper.log-level=FINE -jar paper.jar
 #### Paper.parseYamlCommentsByDefault:
 
 - **默认值**: `true`
-- **描述**: 默认是否分析Yaml中的注释。
+- **描述**: 默认是否分析 Yaml 中的注释。

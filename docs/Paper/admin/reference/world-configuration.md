@@ -1,7 +1,7 @@
 ---
 title: "Paper 针对世界的配置"
 ---
-  
+
 在 `paper-world-defaults.yml` 文件中的每一个配置都可以单独应用于每一个世界。  
 了解如何配置它们，请详见 [配置文件](https://help.1145.one/Paper-Wiki/admin/how-to/configuration)  
 对于全局的配置，请见 [Paper 全局配置](https://help.1145.one/Paper-Wiki/admin/reference/global-configuration)
@@ -10,7 +10,7 @@ title: "Paper 针对世界的配置"
 
 ### anti-xray
 
-#### 关于推荐使用 `engine-mode` `1` 还是 `2` 可以在[配置反矿物透视](https://help.1145.one/Paper-Wiki/admin/how-to/anti-xray)中找到。  
+#### 关于推荐使用 `engine-mode` `1` 还是 `2` 可以在[配置反矿物透视](https://help.1145.one/Paper-Wiki/admin/how-to/anti-xray)中找到。
 
 #### enabled
 
@@ -25,7 +25,7 @@ title: "Paper 针对世界的配置"
 #### max-block-height
 
 - **默认值**: `64`
-- **描述**: 设定一个最大生效高度 (为 `y` 坐标，将从世界最底部开始计算起）以确定反矿物透视的生效范围。只接受 16 的倍数，其余数字将四舍五入处理。[中文Minecraft Wiki 矿石](https://minecraft.fandom.com/zh/wiki/%E7%9F%BF%E7%9F%B3) 会帮助你确定一个最佳数值。
+- **描述**: 设定一个最大生效高度 (为 `y` 坐标，将从世界最底部开始计算起）以确定反矿物透视的生效范围。只接受 16 的倍数，其余数字将四舍五入处理。[中文 Minecraft Wiki 矿石](https://minecraft.fandom.com/zh/wiki/%E7%9F%BF%E7%9F%B3) 会帮助你确定一个最佳数值。
 
 #### update-radius
 
@@ -47,12 +47,12 @@ title: "Paper 针对世界的配置"
 - **默认值**:
   `[copper_ore, deepslate_copper_ore, gold_ore, deepslate_gold_ore, iron_ore, deepslate_iron_ore, coal_ore, deepslate_coal_ore, lapis_ore, deepslate_lapis_ore, mossy_cobblestone, obsidian, chest, diamond_ore, deepslate_diamond_ore, redstone_ore, deepslate_redstone_ore, clay, emerald_ore, deepslate_emerald_ore, ender_chest]`
 - **描述**: 如果启用反矿物透视模式 `engine-mode: 1` ，哪些方块需要被隐藏掉。它们会被替换为 `石头` (当 y<0 时替换为 `深层` 类型), `下界岩`, 和 `末地岩`，被替换为何种方块将取决于矿物所在维度。忽略任何类型的空气方块。
-如果启用模式 `engine-mode: 2` ，哪些方块在启用反矿物透视的世界中将随机生成。将 `hidden-blocks` 列表中的方块替换为 `replacement-blocks`。方块实体（例如刷怪笼和箱子）在此列表中无效。
+  如果启用模式 `engine-mode: 2` ，哪些方块在启用反矿物透视的世界中将随机生成。将 `hidden-blocks` 列表中的方块替换为 `replacement-blocks`。方块实体（例如刷怪笼和箱子）在此列表中无效。
 
 #### replacement-blocks:
 
 - **默认值**: [stone, oak_planks, deepslate]
-- **描述**: 此列表不会影响使用 `engine-mode: 1` 的世界。修改此列表对于使用模式1的世界无效。
+- **描述**: 此列表不会影响使用 `engine-mode: 1` 的世界。修改此列表对于使用模式 1 的世界无效。
 
   若使用`engine-mode: 2`，`replacement-blocks` 和 `hidden-blocks` 两个列表中的方块都会随机被 `hidden-blocks` 列表中的方块取代。方块实体在 `hidden-blocks` 列表中会被忽略掉，但可以加入到 `replacement-blocks` 列表之中。忽略所有类型的空气方块。
 
@@ -68,7 +68,7 @@ title: "Paper 针对世界的配置"
 ##### hide-itemmeta
 
 - **默认值**: `false`
-- **描述**: 服务器是否要发送（可能会给作弊客户端带来有利条件的）不必要的物品信息给其他玩家的客户端（例如附魔、在潜影盒/背包中的物品等等）。可能会影响需要依赖于获取附魔、Lore或物品名称等的材质包。
+- **描述**: 服务器是否要发送（可能会给作弊客户端带来有利条件的）不必要的物品信息给其他玩家的客户端（例如附魔、在潜影盒/背包中的物品等等）。可能会影响需要依赖于获取附魔、Lore 或物品名称等的材质包。
 
 ##### hide-itemmeta-with-visual-effects
 
@@ -80,7 +80,7 @@ title: "Paper 针对世界的配置"
 ### auto-save-interval
 
 - **默认值**: `-1`
-- **描述**: 配置世界在间隔多少Tick后应当保存一次。此值的优先度高于 `bukkit.yml` 文件中 `ticks-per.autosave` 项。若此值设为 `-1`，则使用 `bukkit.yml` 文件中的`ticks-per.autosave` 作为默认值。
+- **描述**: 配置世界在间隔多少 Tick 后应当保存一次。此值的优先度高于 `bukkit.yml` 文件中 `ticks-per.autosave` 项。若此值设为 `-1`，则使用 `bukkit.yml` 文件中的`ticks-per.autosave` 作为默认值。
 
 ### delay-chunk-unloads-by
 
@@ -95,12 +95,12 @@ title: "Paper 针对世界的配置"
 ### fixed-chunk-inhabited-time
 
 - **默认值**: `-1`
-- **描述**: 如果设定为`0`或更高，则将区块的保持加载时间设定为一个定值。这里的“定值” 是指静态或永不会变，并**不是**指修复一个Bug。从玩家在此区块活跃时起，计时器就会开始计数。
+- **描述**: 如果设定为`0`或更高，则将区块的保持加载时间设定为一个定值。这里的“定值” 是指静态或永不会变，并**不是**指修复一个 Bug。从玩家在此区块活跃时起，计时器就会开始计数。
 
 ### max-auto-save-chunks-per-tick
 
 - **默认值**: `24`
-- **描述**: 单个Tick中自动保存可保存最大区块的数量。
+- **描述**: 单个 Tick 中自动保存可保存最大区块的数量。
 
 ### prevent-moving-into-unloaded-chunks
 
@@ -123,6 +123,7 @@ title: "Paper 针对世界的配置"
 
 - **默认值**: `false`
 - **描述**: 攀爬是否不计入实体堆叠限制内（`maxEntityCramming`游戏规则）。如果设定为 `true`，则正在攀爬的实体也将计入实体堆叠限制，并允许其同样受到窒息伤害。
+
 ### max-entity-collisions
 
 - **默认值**: `8`
@@ -145,7 +146,7 @@ title: "Paper 针对世界的配置"
 #### tick
 
 - **默认值**: `true`
-- **描述**: 当禁用后，盔甲架将停止计算Tick。此项在有大量盔甲架时可以提高性能。
+- **描述**: 当禁用后，盔甲架将停止计算 Tick。此项在有大量盔甲架时可以提高性能。
 
 ### behaviour
 
@@ -167,7 +168,7 @@ title: "Paper 针对世界的配置"
 #### disable-player-crits
 
 - **默认值**: `false`
-- **描述**: 在PvP中是否要禁用暴击，即每一次挥剑的伤害相同。
+- **描述**: 在 PvP 中是否要禁用暴击，即每一次挥剑的伤害相同。
 
 #### allow-spider-world-border-climbing
 
@@ -187,7 +188,7 @@ title: "Paper 针对世界的配置"
 #### experience-merge-max-value
 
 - **默认值**: `-1`
-- **描述**: 单个经验球可提供的最大经验值，防止将周围的所有经验都合并在一个经验球里面。设定`-1`则没有上限，可以把周围经验全部合并到一个经验球之中。当击杀Boss后此变化非常明显。
+- **描述**: 单个经验球可提供的最大经验值，防止将周围的所有经验都合并在一个经验球里面。设定`-1`则没有上限，可以把周围经验全部合并到一个经验球之中。当击杀 Boss 后此变化非常明显。
 
 #### mobs-can-always-pick-up-loot
 
@@ -197,7 +198,7 @@ title: "Paper 针对世界的配置"
 #### nerf-pigmen-from-nether-portals
 
 - **默认值**: `false`
-- **描述**: 是否移除由下界传送门生成的猪人的AI。
+- **描述**: 是否移除由下界传送门生成的猪人的 AI。
 
 #### parrots-are-unaffected-by-player-movement
 
@@ -224,7 +225,7 @@ title: "Paper 针对世界的配置"
 ##### disable
 
 - **默认值**: `false`
-- **描述**: 是否要禁用掠夺者巡逻机制和相关的AI。
+- **描述**: 是否要禁用掠夺者巡逻机制和相关的 AI。
 
 ##### spawn-chance
 
@@ -241,7 +242,7 @@ title: "Paper 针对世界的配置"
 ###### ticks
 
 - **默认值**: `12000`
-- **描述**: 需要间隔多少Tick后才有概率重新生成。
+- **描述**: 需要间隔多少 Tick 后才有概率重新生成。
 
 ##### start
 
@@ -268,7 +269,7 @@ title: "Paper 针对世界的配置"
 #### zombie-villager-infection-chance
 
 - **默认值**: `-1.0`
-- **描述**: 设定村民转换为僵尸村民的概率。设定为 `-1.0` 将由原版游戏难度决定。设定为 `0.0` 时，僵尸将永远会直接杀死村民。设定为 `100.0` 时，僵尸将永远直接转化村民为僵尸村民。译者注：根据Minecraft Wiki得知，简单模式不会将村民转换为僵尸村民，普通模式转换为僵尸村民的概率是50%，困难模式转换为僵尸村民的概率是100%。
+- **描述**: 设定村民转换为僵尸村民的概率。设定为 `-1.0` 将由原版游戏难度决定。设定为 `0.0` 时，僵尸将永远会直接杀死村民。设定为 `100.0` 时，僵尸将永远直接转化村民为僵尸村民。译者注：根据 Minecraft Wiki 得知，简单模式不会将村民转换为僵尸村民，普通模式转换为僵尸村民的概率是 50%，困难模式转换为僵尸村民的概率是 100%。
 
 #### zombies-target-turtle-eggs
 
@@ -278,7 +279,7 @@ title: "Paper 针对世界的配置"
 ### entities-target-with-follow-range
 
 - **默认值**: `false`
-- **描述**: 当视实体为目标时，服务器是否应该直接使用Follow range。译者注：我不知道这个Follow range是不是一个配置文件键名，中文应该是“追寻距离”。
+- **描述**: 当视实体为目标时，服务器是否应该直接使用 Follow range。译者注：我不知道这个 Follow range 是不是一个配置文件键名，中文应该是“追寻距离”。
 
 ### mob-effects
 
@@ -313,8 +314,8 @@ title: "Paper 针对世界的配置"
 
 ##### items
 
-- **默认值**: `{ cobblestone: 300 }` (从Ticks mappings获取物品列表)
-- **描述**: 为不同物品设定不同的消失时间（以Tick为单位）。物品ID和原版/give命令（命名空间ID）一样，也可以按下**F3+H**启用游戏内的高级提示框，将鼠标指针放在物品栏中的任意物品上面，会显示在物品信息的最底行。
+- **默认值**: `{ cobblestone: 300 }` (从 Ticks mappings 获取物品列表)
+- **描述**: 为不同物品设定不同的消失时间（以 Tick 为单位）。物品 ID 和原版/give 命令（命名空间 ID）一样，也可以按下**F3+H**启用游戏内的高级提示框，将鼠标指针放在物品栏中的任意物品上面，会显示在物品信息的最底行。
 
 #### count-all-mobs-for-spawning
 
@@ -324,7 +325,7 @@ title: "Paper 针对世界的配置"
 #### creative-arrow-despawn-rate
 
 - **默认值**: `-1`
-- **描述**: 创造模式玩家射出的箭消失的速度。以Tick为单位。
+- **描述**: 创造模式玩家射出的箭消失的速度。以 Tick 为单位。
 
 #### despawn-ranges
 
@@ -349,9 +350,9 @@ title: "Paper 针对世界的配置"
 
 - **默认值**: `saferegen`
 
-- **描述**: 用于处理相同UUID的实体的处理办法。  
- 以下是可选的值：  
-  - **`saferegen`**: 为实体重新命名UUID。如果两个离得很近就移除。
+- **描述**: 用于处理相同 UUID 的实体的处理办法。  
+  以下是可选的值：
+  - **`saferegen`**: 为实体重新命名 UUID。如果两个离得很近就移除。
   - **`delete`**: 移除实体。
   - **`silent`**: 什么都不做，也不打印日志。
   - **`warn`**: 什么都不做，只打印日志。
@@ -364,7 +365,7 @@ title: "Paper 针对世界的配置"
 #### filter-nbt-data-from-spawn-eggs-and-related
 
 - **默认值**: `true`
-- **描述**: 服务器是否要删除部分从刷怪蛋刷出的生物、Falling Block的实体形式和经常用在创造模式下会滥用的物品的NBT。
+- **描述**: 服务器是否要删除部分从刷怪蛋刷出的生物、Falling Block 的实体形式和经常用在创造模式下会滥用的物品的 NBT。
 - **说明**: 部分冒险模式的地图需要关闭此项，但是不建议在公开的服务器上禁用此选项。
 
 #### iron-golems-can-spawn-in-air
@@ -380,14 +381,14 @@ title: "Paper 针对世界的配置"
 #### non-player-arrow-despawn-rate
 
 - **默认值**: `default`
-- **描述**: 非玩家实体射出箭后箭矢消失的速度。以Tick为单位。  
- 设定为 `default` 则使用 `spigot.yml` 中默认的箭矢消失速度，并且将应用于全部箭矢。  
+- **描述**: 非玩家实体射出箭后箭矢消失的速度。以 Tick 为单位。  
+  设定为 `default` 则使用 `spigot.yml` 中默认的箭矢消失速度，并且将应用于全部箭矢。
 
 #### per-player-mob-spawns
 
 - **默认值**: `true`
-- **描述**: 是为单个玩家还是为全部服务器应用怪物上限（在bukkit.yml设定）。  
- 当启用此项后，怪物生成的数量与禁用此项的数量几乎是一致的，但是会更加均匀。可以防止一个人占用全服的怪物上限，让每名玩家都有良好的游戏体验。
+- **描述**: 是为单个玩家还是为全部服务器应用怪物上限（在 bukkit.yml 设定）。  
+  当启用此项后，怪物生成的数量与禁用此项的数量几乎是一致的，但是会更加均匀。可以防止一个人占用全服的怪物上限，让每名玩家都有良好的游戏体验。
 
 #### scan-for-legacy-ender-dragon
 
@@ -406,24 +407,24 @@ title: "Paper 针对世界的配置"
 ###### maximum
 
 - **默认值**: `40`
-- **描述**: 史莱姆区块生成史莱姆的Y最小值。
+- **描述**: 史莱姆区块生成史莱姆的 Y 最小值。
 
 ##### swamp-biome
 
 ###### maximum
 
 - **默认值**: `70`
-- **描述**: 沼泽生物群系生成史莱姆的Y最大值。
+- **描述**: 沼泽生物群系生成史莱姆的 Y 最大值。
 
 ###### minimum
 
 - **默认值**: `50`
-- **描述**: 沼泽生物群系生成史莱姆的Y最小值.
+- **描述**: 沼泽生物群系生成史莱姆的 Y 最小值.
 
 #### spawn-limits
 
 - **默认值**: `-1`
-- **描述**: 用于确定每种类型的实体（可以单独设置）在每个世界中自然生成的数量。此值与bukkit.yml中的配置项是一样的，不过可以为每个世界单独设置。若设定为 `-1` 将交由 bukkit.yml 中的值管理。 
+- **描述**: 用于确定每种类型的实体（可以单独设置）在每个世界中自然生成的数量。此值与 bukkit.yml 中的配置项是一样的，不过可以为每个世界单独设置。若设定为 `-1` 将交由 bukkit.yml 中的值管理。
 
 #### wandering-trader
 
@@ -445,12 +446,12 @@ title: "Paper 针对世界的配置"
 ##### spawn-day-length
 
 - **默认值**: `24000`
-- **描述**: 尝试生成流浪商人的间隔时间。以Tick为单位。
+- **描述**: 尝试生成流浪商人的间隔时间。以 Tick 为单位。
 
 ##### spawn-minute-length
 
 - **默认值**: `1200`
-- **描述**: 流浪商人生成的时间长度。以Tick为单位。
+- **描述**: 流浪商人生成的时间长度。以 Tick 为单位。
 
 #### wateranimal-spawn-height
 
@@ -458,13 +459,13 @@ title: "Paper 针对世界的配置"
 
 - **默认值**: `default`
 - **描述**: 水生动物生成的最大高度。
-- **说明**: 默认值即遵循原版Minecraft生成的高度，也就是1.12.2版本的水平面高度 (通常 Y: 64)。
+- **说明**: 默认值即遵循原版 Minecraft 生成的高度，也就是 1.12.2 版本的水平面高度 (通常 Y: 64)。
 
 ##### minimum
 
 - **默认值**: `default`
 - **描述**: 水生动物生成的最小高度。
-- **说明**: 默认值即遵循原版Minecraft生成的高度，也就是1.12.2版本的水平面高度 (通常 Y: 64)。
+- **说明**: 默认值即遵循原版 Minecraft 生成的高度，也就是 1.12.2 版本的水平面高度 (通常 Y: 64)。
 
 ## environment
 
@@ -472,7 +473,8 @@ title: "Paper 针对世界的配置"
 
 - **默认值**: `false`
 - **描述**: 服务器是否应该完全阻止由爆炸造成的击退。
-- 
+-
+
 ### disable-ice-and-snow
 
 - **默认值**: `false`
@@ -496,17 +498,17 @@ title: "Paper 针对世界的配置"
 ##### max
 
 - **默认值**: `40`
-- **描述**: 霜冰效果的最大RNG值。
+- **描述**: 霜冰效果的最大 RNG 值。
 
 ##### min
 
 - **默认值**: `20`
-- **描述**: 霜冰效果的最小RNG值。
+- **描述**: 霜冰效果的最小 RNG 值。
 
 #### enabled
 
 - **默认值**: `true`
-- **描述**: 服务器是否要启用（并计时Tick）霜冰方块。译者注：根据Minecraft Wiki得知，霜冰应该是冰霜行者附魔创造出的方块。
+- **描述**: 服务器是否要启用（并计时 Tick）霜冰方块。译者注：根据 Minecraft Wiki 得知，霜冰应该是冰霜行者附魔创造出的方块。
 
 ### generate-flat-bedrock
 
@@ -516,7 +518,7 @@ title: "Paper 针对世界的配置"
 ### nether-ceiling-void-damage-height
 
 - **默认值**: `disabled`
-- **描述**: 设定玩家在地狱Y高度应该高于多少后受到虚空伤害。这是一个非常“友好”的方式限制玩家在地狱基岩天花板上建筑。设定为`disabled`以禁用此功能。
+- **描述**: 设定玩家在地狱 Y 高度应该高于多少后受到虚空伤害。这是一个非常“友好”的方式限制玩家在地狱基岩天花板上建筑。设定为`disabled`以禁用此功能。
 
 ### optimize-explosions
 
@@ -580,13 +582,12 @@ title: "Paper 针对世界的配置"
 ### maximum
 
 - **默认值**: `600`
-- **描述**: 钓鱼前的最大RNG Tick。
+- **描述**: 钓鱼前的最大 RNG Tick。
 
 ### minimum
 
 - **默认值**: `100`
-- **描述**: 钓鱼前的最小RNG Tick。
-
+- **描述**: 钓鱼前的最小 RNG Tick。
 
 ## fixes
 
@@ -613,7 +614,7 @@ title: "Paper 针对世界的配置"
 ### prevent-tnt-from-moving-in-water
 
 - **默认值**: `false`
-- **描述**: 服务器是否应该禁止已激活的TNT在水中游动。
+- **描述**: 服务器是否应该禁止已激活的 TNT 在水中游动。
 
 ### split-overstacked-loot
 
@@ -623,7 +624,7 @@ title: "Paper 针对世界的配置"
 ### tnt-entity-height-nerf
 
 - **默认值**: `disabled`
-- **描述**: 服务器移除已激活的TNT最大高度的值。设定为 `disabled` 以禁用此项。
+- **描述**: 服务器移除已激活的 TNT 最大高度的值。设定为 `disabled` 以禁用此项。
 
 ## hopper
 
@@ -731,7 +732,7 @@ title: "Paper 针对世界的配置"
 ### light-queue-size
 
 - **默认值**: `20`
-- **描述**: 设定每个世界对于非主线程的光更新队列的大小。原版设定此值为 `5`，但是实际使用此值会造成许多问题，特别是当使用WorldEdit等插件时。
+- **描述**: 设定每个世界对于非主线程的光更新队列的大小。原版设定此值为 `5`，但是实际使用此值会造成许多问题，特别是当使用 WorldEdit 等插件时。
 
 ### max-leash-distance
 
@@ -740,7 +741,7 @@ title: "Paper 针对世界的配置"
 
 ### redstone-implementation
 
-::: warning 
+::: warning
 此项所有内容都是实验性的。  
 如果出现问题，也许会在发布某个补丁的同时永久删除这些内容。  
 :::
@@ -751,18 +752,19 @@ title: "Paper 针对世界的配置"
   - **eigencraft**: theosib 开发的 Eigencraft 红石实现。
   - **alternate-current**: Space Walker 开发的 Alternate Current 红石实现。
 - **注意:** 无论是 Eigencraft 还是 Alternate Current 的红石实现方式都修改了红石的行为。通过以下文档了解各自的红石实现。
-  - Eigencraft: 目前没有官方文档。但是[theosib's comments](https://bugs.mojang.com/browse/MC-81098?focusedCommentId=420777#comment-42077)在Mojira Bug Tracker对此实现进行了概述。
+  - Eigencraft: 目前没有官方文档。但是[theosib's comments](https://bugs.mojang.com/browse/MC-81098?focusedCommentId=420777#comment-42077)在 Mojira Bug Tracker 对此实现进行了概述。
   - [Alternate Current](https://github.com/SpaceWalkerRS/alternate-current/blob/main/README.md)
 
 ### shield-blocking-delay
 
 - **默认值**: `5`
-- **描述**: 玩家举起盾牌与实际格挡伤害之间需要间隔多少Tick。
+- **描述**: 玩家举起盾牌与实际格挡伤害之间需要间隔多少 Tick。
 
 ### show-sign-click-command-failure-msgs-to-player
 
 - **默认值**: `false`
 - **描述**: 点击告示牌运行命令失败时是否需要向玩家显示失败消息。
+
 ### update-pathfinding-on-block-update
 
 - **默认值**: `true`
@@ -806,28 +808,28 @@ title: "Paper 针对世界的配置"
 ##### validatenearbypoi
 
 - **默认值**: `-1`
-- **描述**: 设定村民实体的 `validatenearbypoi` 行为的Tick速率。
+- **描述**: 设定村民实体的 `validatenearbypoi` 行为的 Tick 速率。
 
 #### `<entity-type>`
 
 ##### `<behavior-name>`
 
-- **描述**: 对于特定实体种类设定Tick速率。`-1` 与原版保持一致。在Timings中查看实体名称。可能在以后的更新补丁中更改此项。
+- **描述**: 对于特定实体种类设定 Tick 速率。`-1` 与原版保持一致。在 Timings 中查看实体名称。可能在以后的更新补丁中更改此项。
 
 ### container-update
 
 - **默认值**: `1`
-- **描述**: 服务器更新容器和物品栏的速率。以Tick为单位。
+- **描述**: 服务器更新容器和物品栏的速率。以 Tick 为单位。
 
 ### grass-spread
 
 - **默认值**: `1`
-- **描述**: 设定服务器尝试蔓延草方块时的延迟。以Tick为单位。这个数值越高，蔓延的速度就越慢。
+- **描述**: 设定服务器尝试蔓延草方块时的延迟。以 Tick 为单位。这个数值越高，蔓延的速度就越慢。
 
 ### mob-spawner
 
 - **默认值**: 1
-- **描述**: 刷怪笼应该多少Tick后计算可用生物生成区并尝试生成生物。设定为 `-1` 禁用所有刷怪笼。
+- **描述**: 刷怪笼应该多少 Tick 后计算可用生物生成区并尝试生成生物。设定为 `-1` 禁用所有刷怪笼。
 
 ### sensor
 
@@ -836,13 +838,13 @@ title: "Paper 针对世界的配置"
 ##### secondarypoisensor
 
 - **默认值**: `40`
-- **描述**: 设定村民实体的 `secondarypoisensor` 传感器的Tick速率。
+- **描述**: 设定村民实体的 `secondarypoisensor` 传感器的 Tick 速率。
 
 #### `<entity-type>`
 
 ##### `<sensor-name>`
 
-- **描述**: 对于特定实体种类设定传感器Tick速率。`-1` 与原版保持一致。在Timings中查看实体名称。可能在以后的更新补丁中更改此项。
+- **描述**: 对于特定实体种类设定传感器 Tick 速率。`-1` 与原版保持一致。在 Timings 中查看实体名称。可能在以后的更新补丁中更改此项。
 
 ### unsupported-settings
 
