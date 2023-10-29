@@ -11,8 +11,8 @@ const config = {
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Happy-clo', // Usually your GitHub org/user name.
-  projectName: 'Happy-Docs', // Usually your repo name.
+  organizationName: 'Happy-clo', // Github组织/用户名称
+  projectName: 'Happy-Docs', // 通常是项目仓库名
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
   i18n: {
@@ -22,8 +22,7 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
@@ -32,47 +31,61 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      }
     ],
   ],
-  themeConfig: 
-      /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-      ({
-        navbar: {
-          title: 'Happy Docs',
-          logo: {
-            alt: 'icon',
-            src: 'img/logo.svg',
-          },
+  themeConfig: {
+    navbar: {
+      title: 'Happy Docs',
+      logo: {
+        alt: 'icon',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'doc',
+          position: 'left',
+          docId: 'home',
+          label: '首页',
+        },
+        {
+          href: 'https://ai.maoyuan.us/',
+          label: 'ChatWeb',
+          position: 'right',
+        },
+        {
+          href: 'https://bingai.maoyuan.us/',
+          label: 'Bing',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: '文档',
           items: [
             {
-              type: 'doc',
-              position: 'left',
-              docId: 'home',
-              label: 'Docs',
-            },
-            {
-              href: 'https://ai.maoyuan.us/',
-              label: 'ChatWeb',
-              position: 'right',
-            },
-            {
-              href: 'https://bingai.maoyuan.us/',
-              label: 'Bing',
-              position: 'right',
+              label: 'GitHub',
+              href: 'https://github.com/Happy-clo',
             },
           ],
         },
-        prism: {
-          theme: lightCodeTheme,
-          darkTheme: darkCodeTheme,
-        },
-        algolia: {
-          apiKey: '9a34f1ab99b281b2863d5aa483bf4d6c',
-          indexName: 'happy',
-          appId: 'Z5WW3ZRWVZ', // Optional, if you run the DocSearch crawler on your own
-          algoliaOptions: {}, // Optional, if provided by Algolia
-        },
-      }),
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Happy, Inc.`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
+    },
+    algolia: {
+      apiKey: '9a34f1ab99b281b2863d5aa483bf4d6c',
+      indexName: 'happy',
+      appId: 'Z5WW3ZRWVZ',
+      algoliaOptions: {},
+    },
+  },
 };
+
 module.exports = config;
