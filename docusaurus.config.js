@@ -62,6 +62,18 @@ const config = {
           },
         ],
       },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: '文档',
+          items: [
+            {
+              label: '文档',
+              to: 'docs/',
+            },
+          ],
+        },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
