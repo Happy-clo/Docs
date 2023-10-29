@@ -1,6 +1,4 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -10,11 +8,9 @@ const config = {
   tagline: 'Docs for Happy',
   url: 'https://docs.wdsj.one/',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  // @ts-ignore
-  onBrokenLinks: 'ignore',
   organizationName: 'Happy-clo', // Usually your GitHub org/user name.
   projectName: 'Happy-Docs', // Usually your repo name.
   trailingSlash: false,
@@ -39,52 +35,52 @@ const config = {
       }),
     ],
   ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'Happy Docs',
-        logo: {
-          alt: 'icon',
-          src: 'img/logo.svg',
+  themeConfig: 
+      /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+      ({
+        navbar: {
+          title: 'Happy Docs',
+          logo: {
+            alt: 'icon',
+            src: 'img/logo.svg',
+            },
+            items: [
+              {
+                href: 'https://ai.maoyuan.us/',
+                label: 'ChatWeb',
+                position: 'right',
+              },
+              {
+                href: 'https://bingai.maoyuan.us/',
+                label: 'Bing',
+                position: 'right',
+              },
+            ],
         },
-        items: [
-          {
-            href: 'https://ai.maoyuan.us/',
-            label: 'ChatWeb',
-            position: 'right',
-          },
-          {
-            href: 'https://bingai.maoyuan.us/',
-            label: 'Bing',
-            position: 'right',
-          },
-        ],
-      },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: '文档',
-          items: [
+        footer: {
+          style: 'dark',
+          links: [
             {
-              label: '文档',
-              to: 'docs/',
+              title: '文档',
+              items: [
+                {
+                  label: '文档',
+                  to: 'docs/',
+                },
+              ],
             },
           ],
         },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-      algolia: {
-        apiKey: '9a34f1ab99b281b2863d5aa483bf4d6c',
-        indexName: 'happy',
-        appId: 'Z5WW3ZRWVZ', // Optional, if you run the DocSearch crawler on your own
-        algoliaOptions: {} // Optional, if provided by Algolia
-      },
-    }),
-};
-
+        prism: {
+          theme: lightCodeTheme,
+          darkTheme: darkCodeTheme,
+        },
+        algolia: {
+          apiKey: '9a34f1ab99b281b2863d5aa483bf4d6c',
+          indexName: 'happy',
+          appId: 'Z5WW3ZRWVZ', // Optional, if you run the DocSearch crawler on your own
+          algoliaOptions: {}, // Optional, if provided by Algolia
+        },
+      }),
+    };
 module.exports = config;
