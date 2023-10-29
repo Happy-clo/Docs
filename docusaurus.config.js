@@ -43,31 +43,23 @@ const config = {
           logo: {
             alt: 'icon',
             src: 'img/logo.svg',
-            },
-            items: [
-              {
-                href: 'https://ai.maoyuan.us/',
-                label: 'ChatWeb',
-                position: 'right',
-              },
-              {
-                href: 'https://bingai.maoyuan.us/',
-                label: 'Bing',
-                position: 'right',
-              },
-            ],
-        },
-        footer: {
-          style: 'dark',
-          links: [
+          },
+          items: [
             {
-              title: '文档',
-              items: [
-                {
-                  label: '文档',
-                  to: 'docs/',
-                },
-              ],
+              type: 'doc',
+              position: 'left',
+              docId: 'README',
+              label: 'Docs',
+            },
+            {
+              href: 'https://ai.maoyuan.us/',
+              label: 'ChatWeb',
+              position: 'right',
+            },
+            {
+              href: 'https://bingai.maoyuan.us/',
+              label: 'Bing',
+              position: 'right',
             },
           ],
         },
@@ -82,5 +74,5 @@ const config = {
           algoliaOptions: {}, // Optional, if provided by Algolia
         },
       }),
-    };
+};
 module.exports = config;
