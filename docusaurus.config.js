@@ -48,7 +48,7 @@ const config = {
             {
               type: 'doc',
               position: 'left',
-              docId: 'README',
+              docId: 'home',
               label: 'Docs',
             },
             {
