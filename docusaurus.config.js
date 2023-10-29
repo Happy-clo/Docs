@@ -56,7 +56,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://bingai.wdsj.one/',
+            href: 'https://bingai.maoyuan.us/',
             label: 'Bing',
             position: 'right',
           },
