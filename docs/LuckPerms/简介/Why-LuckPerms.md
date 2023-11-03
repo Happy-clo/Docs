@@ -1,4 +1,6 @@
-<!--- https://paste.lucko.me/HWn0fZKoJn -->
+---
+title: "为什么选择 LuckPerms?"
+---
 
 ## 这是另外一款全新的权限插件？
 
@@ -33,14 +35,14 @@ LuckPerm 是我在 2016 年开始准备编写的插件，但因为 Bukkit 变得
 不过，这也为我编写 LuckPerm 提供的很好的参考帮助，因为我可以避免其它同类插件的缺陷，
 并且明白它们哪些地方做的特别出色，我可以在其基础之上进一步优化，使那部分功能变得更加引人瞩目。
 
-记着，如果你对 LuckPerm 技术性方面的内容感兴趣，我推荐你从[命令使用](/Command-Usage.md)部分开始阅读
+记着，如果你对 LuckPerm 技术性方面的内容感兴趣，我推荐你从[命令使用](/简介/命令使用.md)部分开始阅读
 或者看看 wiki 列出的其他部分内容，在本节的其余部分，我会将阅读重点放到 LuckPerm 一些全新的特色功能上面。
 
 这些内容是你不太可能从其他插件中找到的，专属 luckPerm 的特色功能！
 
 ### Verbose（权限查看系统）
 
-LuckPerm 有一套完整的权限查看系统，是的，它叫做[verbose](/Verbose.md)。
+LuckPerm 有一套完整的权限查看系统，是的，它叫做[verbose](/特性/权限检查系统（Verbose）.md)。
 他可以实时监视并检测其他插件所需的权限，就像下面示例的动态图那样：
 
 [![](https://thumbs.gfycat.com/FearlessVelvetyBellfrog-size_restricted.gif)](https://gfycat.com/FearlessVelvetyBellfrog)
@@ -65,7 +67,7 @@ LuckPerm 允许你在服务器所有已知权限上建立编写"权限树"。
 ### 指令界面&TAB 补全
 
 LuckPerm 的指令系统被我设计的尽可能便捷、易用、人性化，
-这样一来，你除了查阅 LuckPerm 的[大量相关帮助文档](/Command-Usage.md)，还可以在游戏中查看指令用法、以及指令列表。
+这样一来，你除了查阅 LuckPerm 的[大量相关帮助文档](/简介/命令使用.md)，还可以在游戏中查看指令用法、以及指令列表。
 
 ![](http://i.imgur.com/XIVPP6P.png)
 
