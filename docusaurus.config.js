@@ -49,12 +49,12 @@ const config = {
           label: '首页',
         },
         {
-          href: 'https://ai.maoyuan.us/',
+          href: 'https://free.happya.top/',
           label: 'ChatWeb',
           position: 'right',
         },
         {
-          href: 'https://bingai.maoyuan.us/',
+          href: 'https://bingai.happya.top/',
           label: 'Bing',
           position: 'right',
         },
