@@ -49,15 +49,6 @@ const config = {
           label: '首页',
         },
         {
-<<<<<<< HEAD
-          href: 'https://chat.happya.top/',
-          label: 'Happy AIChat',
-          position: 'right',
-        },
-        {
-          href: 'https://b.happya.top/',
-          label: 'Bing AI',
-=======
           href: 'https://free.happya.top/',
           label: 'ChatWeb',
           position: 'right',
@@ -65,7 +56,6 @@ const config = {
         {
           href: 'https://bingai.happya.top/',
           label: 'Bing',
->>>>>>> f508d530c9ef9208906b74c9cf2700057d6a720e
           position: 'right',
         },
       ],
