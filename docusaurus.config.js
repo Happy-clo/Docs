@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Happy Docs',
   tagline: 'Docs for Happy',
-  url: 'https://docs.wdsj.one/',
+  url: 'https://docs.happya.top/',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
@@ -26,7 +26,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/Happy-clo/Docs/tree/main/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -49,6 +49,15 @@ const config = {
           label: '首页',
         },
         {
+<<<<<<< HEAD
+          href: 'https://chat.happya.top/',
+          label: 'Happy AIChat',
+          position: 'right',
+        },
+        {
+          href: 'https://b.happya.top/',
+          label: 'Bing AI',
+=======
           href: 'https://free.happya.top/',
           label: 'ChatWeb',
           position: 'right',
@@ -56,6 +65,7 @@ const config = {
         {
           href: 'https://bingai.happya.top/',
           label: 'Bing',
+>>>>>>> f508d530c9ef9208906b74c9cf2700057d6a720e
           position: 'right',
         },
       ],
@@ -64,7 +74,7 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: '文档',
+          title: '关于',
           items: [
             {
               label: 'GitHub',
