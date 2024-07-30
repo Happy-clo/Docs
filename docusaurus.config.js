@@ -47,17 +47,7 @@ const config = {
           position: 'left',
           docId: 'home',
           label: '首页',
-        },
-        {
-          href: 'https://free.happya.top/',
-          label: 'ChatWeb',
-          position: 'right',
-        },
-        {
-          href: 'https://bingai.happya.top/',
-          label: 'Bing',
-          position: 'right',
-        },
+        }
       ],
     },
     footer: {
