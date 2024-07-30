@@ -1,0 +1,418 @@
+---
+slug: /anti-xray
+description: Paper 默认包含一个基于混淆的Anti-Xray系统。了解如何在此配置它。
+---
+
+# 配置 Anti-Xray
+
+> 最初由 [stonar96](https://github.com/stonar96) 编写和维护。
+
+Paper 包含一个基于混淆的 Anti-Xray 系统，具有三种模式，可以按世界配置。
+
+:::info[按世界配置]
+
+如果你还不熟悉按世界配置，请花点时间熟悉一下[配置指南](./reference/configuration)。
+
+:::
+
+本指南是配置 Anti-Xray 的逐步指南。有关参考文档，请参阅
+[按世界配置参考](../reference/configuration/world-configuration.mdx#anticheat_anti_xray)中的 Anti-Xray 部分。
+
+Anti-Xray 有三种不同的模式。`engine-mode: 1` 将指定的方块（`hidden-blocks`）替换为其他“假”方块，如`stone`（在 y < 0 时为`deepslate`）、`netherrack`或`end_stone`，具体取决于维度。相比之下，`engine-mode: 2` 将同时替换`hidden-blocks`和`replacement-blocks`为随机生成的`hidden-blocks`。`engine-mode: 3` 的工作方式类似于`engine-mode: 2`，但不是随机化每个方块，而是随机化每个区块的每一层。
+
+以下图片[^1]显示了在推荐配置下，使用 Xray 的玩家在主世界和下界中看到的每种模式的效果。
+
+[^1]:
+    图片设计由 `Oberfail` 提供，最初发布在
+    [PaperMC Discord](https://discord.gg/papermc)。
+
+{/\*
+
+种子: -7943468717341609647
+
+# 主世界:
+
+/tp @p -581.976 67.85076 -4924.106 47 36
+
+# 下界:
+
+/tp @p 789.437 117.38012 -319.064 -137.4 28
+\*/}
+
+![主世界 Anti-Xray 比较](assets/anti-xray-overworld.png)
+![下界 Anti-Xray 比较](assets/anti-xray-nether.png)
+
+特别是在客户端方面，`engine-mode: 1` 的计算量要小得多，而`engine-mode: 2` 可能更能防止 Xray。使用`engine-mode: 1`，只有完全被实心方块覆盖的矿石才会被隐藏。在洞穴中的空气或湖泊中的水暴露的矿石不会被隐藏。使用`engine-mode: 2`，假矿石会阻挡真实方块的视线。如果将`air`添加到`hidden-blocks`中，`engine-mode: 2`将有效地隐藏所有矿石，即使是暴露在空气中的矿石。`engine-mode: 3`可以在加入时减少约 2 倍的网络负载，并有助于区块包的压缩。
+
+:::caution[Anti-Xray 绕过]
+
+**范围扩展**：虽然 Anti-Xray 本身可以防止大多数用户在你的服务器上使用 Xray，但它并不是万无一失的。由于 Anti-Xray 的实现方式（以及必须的实现方式），在默认服务器上，可以将你能看到的真实矿石的范围扩展到一个不小的量。这可以通过任何有能力的反作弊插件来缓解；然而，这并不是开箱即用的。
+
+**种子反转**：另一个攻击向量是 Minecraft 世界生成的确定性。如果客户端能够获得世界种子，它就能知道每个生成的矿石的真实位置，完全绕过 Anti-Xray。这可以通过使用[`feature-seeds`配置](../reference/configuration/world-configuration.mdx#feature_seeds)以及`spigot.yml`中的结构种子选项来部分解决。请注意，这不是一个完整的解决方案，客户端仍然可能获得服务器的世界种子。为每个世界使用不同的种子也可能是有益的。
+
+**暴露在空气中的矿石**：在`engine-mode: 1`、`engine-mode: 2`和`engine-mode: 3`中，客户端可能会看到暴露在空气中的矿石。这可以通过在`engine-mode: 2`和`engine-mode: 3`中将`air`添加到`hidden-blocks`列表中来缓解。然而，这样做可能会导致某些玩家的客户端性能问题（FPS 下降）。
+
+:::
+
+## 推荐配置
+
+以下是`engine-mode: 1`、`engine-mode: 2`和`engine-mode: 3`的推荐配置：
+
+:::tip[间距]
+
+YAML 对空白字符很敏感！下面的示例配置已经正确格式化。请确保使用每个示例右上角的“复制”按钮，以确保格式和缩进保持不变。特别要确保没有意外插入制表符。检查你的编辑器选项以使用空格而不是制表符进行缩进。如果你的配置文件已经包含其他重要更改，建议在编辑前进行备份。
+
+:::
+
+### `engine-mode: 1`
+
+<details>
+  <summary>默认世界配置</summary>
+
+将`paper-world-defaults.yml`中的现有`anticheat.anti-xray`块替换为以下内容：
+
+```yaml title="paper-world-defaults.yml"
+anticheat:
+  anti-xray:
+    enabled: true
+    engine-mode: 1
+    hidden-blocks:
+      # 地牢箱子完全被空气包围，因此无法隐藏，但埋藏的宝藏将被隐藏。
+      - chest
+      - coal_ore
+      - deepslate_coal_ore
+      - copper_ore
+      - deepslate_copper_ore
+      - raw_copper_block
+      - diamond_ore
+      - deepslate_diamond_ore
+      - emerald_ore
+      - deepslate_emerald_ore
+      - gold_ore
+      - deepslate_gold_ore
+      - iron_ore
+      - deepslate_iron_ore
+      - raw_iron_block
+      - lapis_ore
+      - deepslate_lapis_ore
+      - redstone_ore
+      - deepslate_redstone_ore
+    lava-obscures: false
+    # 从1.18开始，一些矿石生成得更高。
+    # 请根据自己的判断调整max-block-height设置。
+    # https://minecraft.wiki/w/Ore 可能会有所帮助。
+    max-block-height: 64
+    # replacement-blocks列表在engine-mode: 1中不使用。更改此项将无效。
+    replacement-blocks: []
+    update-radius: 2
+    use-permission: false
+```
+
+</details>
+
+<details>
+  <summary>下界配置</summary>
+
+复制并粘贴到下界世界文件夹中的`paper-world.yml`中。有关更多信息，请参阅[配置指南](./reference/configuration)。
+
+```yml title="world_nether/paper-world.yml"
+anticheat:
+  anti-xray:
+    enabled: true
+    engine-mode: 1
+    hidden-blocks:
+      - ancient_debris
+      - nether_gold_ore
+      - nether_quartz_ore
+    lava-obscures: false
+    max-block-height: 128
+    # replacement-blocks列表在engine-mode: 1中不使用。更改此项将无效。
+    replacement-blocks: []
+    update-radius: 2
+    use-permission: false
+```
+
+</details>
+
+<details>
+  <summary>末地配置</summary>
+
+复制并粘贴到末地世界文件夹中的`paper-world.yml`中。有关更多信息，请参阅[配置指南](./reference/configuration)。
+
+```yml title="world_the_end/paper-world.yml"
+anticheat:
+  anti-xray:
+    enabled: false
+```
+
+</details>
+
+### `engine-mode: 2`
+
+<details>
+  <summary>默认世界配置</summary>
+
+将`paper-world-defaults.yml`中的现有`anticheat.anti-xray`块替换为以下内容：
+
+```yaml title="paper-world-defaults.yml"
+anticheat:
+  anti-xray:
+    enabled: true
+    engine-mode: 2
+    hidden-blocks:
+      # 你可以在这里添加空气，这样会生成许多洞。
+      # 这对洞穴探测器效果很好，但可能会导致所有玩家的客户端FPS下降。
+      - air
+      - copper_ore
+      - deepslate_copper_ore
+      - raw_copper_block
+      - diamond_ore
+      - deepslate_diamond_ore
+      - gold_ore
+      - deepslate_gold_ore
+      - iron_ore
+      - deepslate_iron_ore
+      - raw_iron_block
+      - lapis_ore
+      - deepslate_lapis_ore
+      - redstone_ore
+      - deepslate_redstone_ore
+    lava-obscures: false
+    # 从1.18开始，一些矿石生成得更高。
+    # 请根据自己的判断调整max-block-height设置。
+    # https://minecraft.wiki/w/Ore 可能会有所帮助。
+    max-block-height: 64
+    replacement-blocks:
+      # chest是一个tile实体，不能在engine-mode: 2中添加到hidden-blocks中。
+      # 但在这里添加chest将隐藏埋藏的宝藏，如果max-block-height增加。
+      - chest
+      - amethyst_block
+      - andesite
+      - budding_amethyst
+      - calcite
+      - coal_ore
+      - deepslate_coal_ore
+      - deepslate
+      - diorite
+      - dirt
+      - emerald_ore
+      - deepslate_emerald_ore
+      - granite
+      - gravel
+      - oak_planks
+      - smooth_basalt
+      - stone
+      - tuff
+    update-radius: 2
+    use-permission: false
+```
+
+</details>
+
+<details>
+  <summary>下界配置</summary>
+
+复制并粘贴到下界世界文件夹中的`paper-world.yml`中。有关更多信息，请参阅[配置指南](./reference/configuration)。
+
+```yml title="world_nether/paper-world.yml"
+anticheat:
+  anti-xray:
+    enabled: true
+    engine-mode: 2
+    hidden-blocks:
+      # 参见上面关于空气和可能的客户端性能问题的说明。
+      - air
+      - ancient_debris
+      - bone_block
+      - glowstone
+      - magma_block
+      - nether_bricks
+      - nether_gold_ore
+      - nether_quartz_ore
+      - polished_blackstone_bricks
+    lava-obscures: false
+    max-block-height: 128
+    replacement-blocks:
+      - basalt
+      - blackstone
+      - gravel
+      - netherrack
+      - soul_sand
+      - soul_soil
+    update-radius: 2
+    use-permission: false
+```
+
+</details>
+
+<details>
+  <summary>末地配置</summary>
+
+复制并粘贴到末地世界文件夹中的`paper-world.yml`中。有关更多信息，请参阅[配置指南](./reference/configuration)。
+
+```yml title="world_the_end/paper-world.yml"
+anticheat:
+  anti-xray:
+    enabled: false
+```
+
+</details>
+
+### `engine-mode: 3`
+
+<details>
+  <summary>默认世界配置</summary>
+
+将`paper-world-defaults.yml`中的现有`anticheat.anti-xray`块替换为以下内容：
+
+```yaml title="paper-world-defaults.yml"
+anticheat:
+  anti-xray:
+    enabled: true
+    engine-mode: 3
+    hidden-blocks:
+      # 你可以在这里添加空气，这样会生成许多洞。
+      # 这对洞穴探测器效果很好，但可能会导致所有玩家的客户端FPS下降。
+      - air
+      - copper_ore
+      - deepslate_copper_ore
+      - raw_copper_block
+      - diamond_ore
+      - deepslate_diamond_ore
+      - gold_ore
+      - deepslate_gold_ore
+      - iron_ore
+      - deepslate_iron_ore
+      - raw_iron_block
+      - lapis_ore
+      - deepslate_lapis_ore
+      - redstone_ore
+      - deepslate_redstone_ore
+    lava-obscures: false
+    # 从1.18开始，一些矿石生成得更高。
+    # 请根据自己的判断调整max-block-height设置。
+    # https://minecraft.wiki/w/Ore 可能会有所帮助。
+    max-block-height: 64
+    replacement-blocks:
+      # chest是一个tile实体，不能在engine-mode: 2中添加到hidden-blocks中。
+      # 但在这里添加chest将隐藏埋藏的宝藏，如果max-block-height增加。
+      - chest
+      - amethyst_block
+      - andesite
+      - budding_amethyst
+      - calcite
+      - coal_ore
+      - deepslate_coal_ore
+      - deepslate
+      - diorite
+      - dirt
+      - emerald_ore
+      - deepslate_emerald_ore
+      - granite
+      - gravel
+      - oak_planks
+      - smooth_basalt
+      - stone
+      - tuff
+    update-radius: 2
+    use-permission: false
+```
+
+</details>
+
+<details>
+  <summary>下界配置</summary>
+
+复制并粘贴到下界世界文件夹中的`paper-world.yml`中。有关更多信息，请参阅[配置指南](./reference/configuration)。
+
+```yml title="world_nether/paper-world.yml"
+anticheat:
+  anti-xray:
+    enabled: true
+    engine-mode: 3
+    hidden-blocks:
+      # 参见上面关于空气和可能的客户端性能问题的说明。
+      - air
+      - ancient_debris
+      - bone_block
+      - glowstone
+      - magma_block
+      - nether_bricks
+      - nether_gold_ore
+      - nether_quartz_ore
+      - polished_blackstone_bricks
+    lava-obscures: false
+    max-block-height: 128
+    replacement-blocks:
+      - basalt
+      - blackstone
+      - gravel
+      - netherrack
+      - soul_sand
+      - soul_soil
+    update-radius: 2
+    use-permission: false
+```
+
+</details>
+
+<details>
+  <summary>末地配置</summary>
+
+复制并粘贴到末地世界文件夹中的`paper-world.yml`中。有关更多信息，请参阅[配置指南](./reference/configuration)。
+
+```yml title="world_the_end/paper-world.yml"
+anticheat:
+  anti-xray:
+    enabled: false
+```
+
+</details>
+
+## 常见问题、常见陷阱和支持
+
+<details>
+  <summary>我仍然能看到（一些）矿石/使用X-ray</summary>
+
+如上所述，即使你启用了 Anti-Xray，仍然可能看到（一些）矿石的几个原因：
+
+- 矿石位于配置的`max-block-height`值之上。
+- Anti-Xray 无法隐藏暴露在空气或其他透明方块（例如洞穴中的空气）中的矿石。原则上，这对于`engine-mode: 2`和`engine-mode: 3`也是如此，然而，通常假矿石会阻挡真实方块的视线。隐藏这些暴露的矿石需要额外的插件。
+- `use-permission`选项已启用，并且你拥有 Anti-Xray 绕过权限（`paper.antixray.bypass`）或你是操作员。
+- 配置的方块列表中缺少方块类型。这可能是由于使用了过时的配置文件。
+
+</details>
+
+<details>
+  <summary>我添加了假方块，但X-ray没有显示它们</summary>
+
+如果你使用`engine-mode: 2`或`engine-mode: 3`并且你已将假方块添加到`hidden-blocks`列表中，但在游戏中使用 X-ray 看不到它们，这可能有以下原因：
+
+- 添加的方块类型是 tile 实体。Anti-Xray 可以隐藏（替换）tile 实体（如箱子），前提是它们没有暴露在空气或其他透明方块中。然而，Anti-Xray 不能将 tile 实体作为假方块放入区块中。
+- 你的客户端的 X-ray mod 禁用了该方块或你的 X-ray 资源包没有显示该方块。
+
+</details>
+
+<details>
+  <summary>它在y = 0以下或某些其他地方不起作用。</summary>
+
+- 你的配置文件可能已过时，缺少`replacement-blocks`列表中的重要方块，如`deepslate`或特定生物群系的方块，如`basalt`。你可能还需要检查`hidden-blocks`列表是否包含所有重要的矿石及其`deepslate`变体。
+- 如果它在某个 y 级别以上不起作用，请检查你的`max-block-height`设置。
+
+</details>
+
+<details>
+  <summary>它仍然不起作用，进一步排除故障</summary>
+
+- 确保在更改 Anti-Xray 配置后始终重新启动服务器。更改不会自动应用。
+- 不要使用`/reload`命令。要应用 Anti-Xray 配置更改，需要重新启动。
+- 重新启动服务器后，通过使用 timings 或 spark 检查配置部分，验证配置是否正确应用。
+
+</details>
+
+<details>
+  <summary>如果它仍然不起作用，我该如何以及在哪里寻求支持？</summary>
+
+如果上述要点没有解决你的问题，或者你对 Anti-Xray 有进一步的问题，请不要犹豫，在[PaperMC Discord](https://discord.gg/papermc)的#paper-help 频道向我们提问。请尽量提供尽可能多的关于你的问题的细节。“它不起作用”在寻求支持时并不是很有帮助。描述你想要实现的目标，你尝试了什么，你期望什么以及你观察到了什么。最好包括一个 timings 或 spark 链接以及你在游戏中观察到的图片。
+
+</details>
