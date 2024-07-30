@@ -10,7 +10,7 @@ description: Aikar's flags是一组设计用于提升您Paper服务器性能的J
 
 :::warning[脚本生成器]
 
-**本页仅作为解释页面。** 如果您需要生成启动脚本，请访问我们的 **[脚本生成器](/misc/tools/start-script-gen)**。
+**本页仅作为解释页面。** 如果您需要生成启动脚本，请访问我们的 **[脚本生成器](/Paper/misc/tools/start-script-gen)**。
 
 :::
 
