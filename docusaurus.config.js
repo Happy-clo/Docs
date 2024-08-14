@@ -6,7 +6,7 @@ const config = {
   url: 'https://docs.happya.top/',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'ignore',
   favicon: 'img/favicon.ico',
   organizationName: 'Happy-clo', // Github组织/用户名称
   projectName: 'Happy-Docs', // 通常是项目仓库名
