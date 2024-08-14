@@ -63,8 +63,8 @@ const config = {
       copyright: `Copyright © ${new Date().getFullYear()} Happy, Inc.`,
     },
     prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
     },
     algolia: {
       apiKey: '9a34f1ab99b281b2863d5aa483bf4d6c',
