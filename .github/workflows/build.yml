@@ -4,9 +4,8 @@ on:
   push:
     branches: # 直接推送至这些分支才会触发
       - main # 例如 main 分支
-    types: # 只关注直接提交到分支的事件
-      - ["push"] # 不包括 pull request 事件
-
+    branches-ignore: # 忽略这些分支的直接推送
+      - gh-pages # 例如 develop 分支
 jobs:
   build:
     runs-on: ubuntu-latest
