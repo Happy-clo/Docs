@@ -2,10 +2,9 @@ name: Deploy Docusaurus And Upload Artifacts
 
 on:
   push:
-    branches: # 直接推送至这些分支才会触发
-      - main # 例如 main 分支
-    branches-ignore: # 忽略这些分支的直接推送
-      - gh-pages # 例如 develop 分支
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
