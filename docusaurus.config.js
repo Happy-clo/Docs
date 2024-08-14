@@ -1,4 +1,7 @@
-import { themes as prismThemes } from 'prism-react-renderer';
+// @ts-check
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Happy Docs',
@@ -6,7 +9,7 @@ const config = {
   url: 'https://docs.happya.top/',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'ignore',
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Happy-clo', // Github组织/用户名称
   projectName: 'Happy-Docs', // 通常是项目仓库名
@@ -63,8 +66,8 @@ const config = {
       copyright: `Copyright © ${new Date().getFullYear()} Happy, Inc.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
     },
     algolia: {
       apiKey: '9a34f1ab99b281b2863d5aa483bf4d6c',
