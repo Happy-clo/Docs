@@ -4,8 +4,8 @@
   <ShortName>Happy Docs</ShortName>
   <Description>Search Happy Docs</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://docs.wdsj.one/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://docs.wdsj.one/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.wdsj.one/opensearch.xml" />
-  <moz:SearchForm>https://docs.wdsj.one/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://docs.happya.top/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://docs.happya.top/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.happya.top/opensearch.xml" />
+  <moz:SearchForm>https://docs.happya.top/</moz:SearchForm>
 </OpenSearchDescription>
