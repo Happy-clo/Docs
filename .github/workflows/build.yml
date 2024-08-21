@@ -18,8 +18,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install -g npm-check-updates
-          ncu -u
           npm install
 
       - name: Build Docusaurus site
