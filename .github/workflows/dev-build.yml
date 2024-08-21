@@ -1,9 +1,9 @@
-name: Deploy Docusaurus And Upload Artifacts
+name: Dev Build Docusaurus And Upload Artifacts
 
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   build:
@@ -37,18 +37,3 @@ jobs:
 
       - name: List files in build directory
         run: ls -la build/
-
-      - name: Deploy
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
-          ARGS: "-avz --delete"
-          SOURCE: "build/"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.TARGET }}
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
