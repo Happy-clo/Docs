@@ -1,4 +1,4 @@
-name: Dev Build Docusaurus And Upload Artifacts
+name: Dev Build And Upload Artifacts
 
 on:
   push:
