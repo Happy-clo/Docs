@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@main
         with:
           node-version: 22.x
 
@@ -30,7 +30,7 @@ jobs:
         run: echo "::set-output name=timestamp::$(date +%s)"
 
       - name: Deploy Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@main
         with:
           name: Website-${{ steps.timestamp.outputs.timestamp }}
           path: build
@@ -48,7 +48,7 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.TARGET }}
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
